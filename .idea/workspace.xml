@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3606848a-4cd2-4c98-a7c4-b1b76e8bfb66" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/controller/PayController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/controller/UserController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/shiro/MyRealm.java" afterDir="false" />
@@ -19,6 +20,12 @@
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/img/login_logo.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/addTabs/addTabs.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/addTabs/addTabs.js" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/qiantai-04.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/lkc/model/Tree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/css/bootstrap-table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/css/bootstrap.css" afterDir="false" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootStrap-addTabs/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootStrap-addTabs/bootstrap.addtabs.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootStrap-addTabs/bootstrap.addtabs.js" afterDir="false" />
@@ -41,6 +48,7 @@
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootStrap-addTabs/example/theme/js/jquery.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootStrap-addTabs/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootStrap-addTabs/jquery.cookie.js" afterDir="false" />
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootbox/bootbox.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap-table/bootstrap-table-locale-all.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap-table/bootstrap-table-locale-all.min.js" afterDir="false" />
@@ -224,6 +232,10 @@
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap/js/bootstrap.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap/js/bootstrap.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap/js/npm.js" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap-treeview/bootstrap-treeview.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap-treeview/bootstrap-treeview.min.js" afterDir="false" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap3/css/bootstrap-theme.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap3/css/bootstrap-theme.css.map" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap3/css/bootstrap-theme.min.css" afterDir="false" />
@@ -240,6 +252,7 @@
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap3/js/bootstrap.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap3/js/bootstrap.min.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap3/js/npm.js" afterDir="false" />
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/fileinput/css/fileinput.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/fileinput/css/fileinput.min.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/fileinput/img/loading-sm.gif" afterDir="false" />
@@ -448,6 +461,20 @@
       <change beforePath="$PROJECT_DIR$/eureka-01/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-01/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eureka-01/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-01/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider-shop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider-shop/pom.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/jquery-1.9.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/userList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/mapper/HelloMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/service/HelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/service/HelloServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider-shop/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/provider-shop/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-api/src/main/java/com/lkc/service/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/src/main/java/com/lkc/service/HelloService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-api/target/classes/com/lkc/service/HelloService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/target/classes/com/lkc/service/HelloService.class" afterDir="false" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -482,11 +509,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/provider-shop/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="97">
               <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="26" selection-end-column="21" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/controller/HelloController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/resources/templates/tree.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap3/js/npm.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/resources/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/resources/templates/userList.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/lkc/service/HelloService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/lkc/model/UserEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/lkc/model/Tree.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/service/HelloServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#403#404#0" expanded="true" />
+                <element signature="e#433#434#0" expanded="true" />
+                <element signature="e#639#640#0" expanded="true" />
+                <element signature="e#681#682#0" expanded="true" />
+              </folding>
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
             </state>
           </provider>
         </entry>
@@ -518,9 +635,12 @@
         <option value="$PROJECT_DIR$/eureka-01/src/main/java/com/lkc/Eureka01Application.java" />
         <option value="$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/ProviderShopApplication.java" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
-        <option value="$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/service/HelloServiceImpl.java" />
+        <option value="$PROJECT_DIR$/common/src/test/java/test/Test.java" />
         <option value="$PROJECT_DIR$/provider-shop/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/lkc/model/Tree.java" />
+        <option value="$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/mapper/HelloMapper.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/lkc/service/HelloService.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/common/src/test/java/test/Test.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/lkc/model/UserEntity.java" />
         <option value="$PROJECT_DIR$/service-api/src/main/java/com/lkc/mapper/UserMapper.java" />
@@ -538,6 +658,11 @@
         <option value="$PROJECT_DIR$/consumer-feign/pom.xml" />
         <option value="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/shiro/MyRealm.java" />
         <option value="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/shiro/ShiroConfig.java" />
+=======
+        <option value="$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/service/HelloServiceImpl.java" />
+        <option value="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/userList.html" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
       </list>
     </option>
   </component>
@@ -545,8 +670,8 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="E:\maven\repo" />
-        <option name="mavenHome" value="E:/maven/apache-maven-3.5.0/apache-maven-3.5.0" />
-        <option name="userSettingsFile" value="E:\maven\apache-maven-3.5.0\apache-maven-3.5.0\conf\settings.xml" />
+        <option name="mavenHome" value="E:/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="E:\apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -555,11 +680,19 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+<<<<<<< HEAD
           <item name="springcloud-erp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="springcloud-erp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+=======
+          <item name="common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
@@ -567,6 +700,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="4" />
     <option name="y" value="31" />
     <option name="width" value="1386" />
@@ -574,20 +708,39 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+=======
+    <option name="x" value="870" />
+    <option name="y" value="45" />
+    <option name="width" value="965" />
+    <option name="height" value="785" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+<<<<<<< HEAD
               <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
               <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
               <item name=".idea" type="462c0819:PsiDirectoryNode" />
@@ -595,36 +748,52 @@
             <path>
               <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
               <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lkc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -635,31 +804,61 @@
             <path>
               <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
               <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lkc" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-feign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
               <item name="consumer-feign" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+<<<<<<< HEAD
               <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
               <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
               <item name="consumer-feign" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+<<<<<<< HEAD
               <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
               <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
               <item name="consumer-feign" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+<<<<<<< HEAD
               <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
               <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
               <item name="consumer-feign" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="lkc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -821,30 +1020,136 @@
               <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
               <item name="service-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
-              <item name="service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-feign" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lkc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-feign" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lkc" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-feign" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-feign" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="provider-shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="provider-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="provider-shop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
-              <item name="service-api" type="462c0819:PsiDirectoryNode" />
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="provider-shop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="provider-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="provider-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+            </path>
+            <path>
               <item name="springcloud-erp" type="b2602c69:ProjectViewProjectNode" />
               <item name="springcloud-erp" type="462c0819:PsiDirectoryNode" />
               <item name="service-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lkc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="provider-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="service" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lkc" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="provider-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="lkc" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiantai-04" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiantai-04" type="462c0819:PsiDirectoryNode" />
+              <item name="provider-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
             </path>
           </expand>
           <select />
@@ -862,7 +1167,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/controller" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springcloud-jd" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -874,7 +1183,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
@@ -885,6 +1194,7 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.lkc.mapper" />
+<<<<<<< HEAD
       <recent name="test" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -893,6 +1203,13 @@
       <recent name="E:\实训1月\workspace\springcloud-erp\consumer-feign\src\main\resources\templates" />
       <recent name="E:\实训1月\workspace\springcloud-erp\consumer-feign\src\main\resources\img" />
       <recent name="E:\实训1月\workspace\springcloud-erp\consumer-feign\src\main\resources\static\css" />
+=======
+      <recent name="com.lkc.model" />
+      <recent name="test" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ideaProjects\qiantai-04\consumer-feign\src\main\resources" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
     </key>
   </component>
   <component name="RunDashboard">
@@ -944,8 +1261,14 @@
       <workItem from="1591009958565" duration="3776000" />
       <workItem from="1591057931739" duration="13280000" />
       <workItem from="1591102160897" duration="2719000" />
+<<<<<<< HEAD
       <workItem from="1591140783709" duration="13622000" />
       <workItem from="1591167976384" duration="13905000" />
+=======
+      <workItem from="1591140783709" duration="1661000" />
+      <workItem from="1591149592810" duration="781000" />
+      <workItem from="1591150867655" duration="5631000" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1591102636426</created>
@@ -958,7 +1281,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="53920000" />
+=======
+    <option name="totallyTimeSpent" value="34466000" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -970,10 +1297,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.26096824" />
+=======
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.27248323" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
       <window_info id="Designer" order="1" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -984,13 +1318,22 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.6196721" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" visible="true" weight="0.5229508" />
+=======
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2977208" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.7315876" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Spring" order="7" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.41147542" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.2022792" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.19016394" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -1000,6 +1343,7 @@
       <window_info anchor="bottom" id="JRebel Executor" order="15" />
       <window_info anchor="bottom" id="MyBatis Log" order="16" />
       <window_info anchor="bottom" id="Tail" order="17" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Messages" order="18" weight="0.32786885" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -1013,6 +1357,20 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="JRebel Setup Guide" order="10" weight="0.32980332" />
       <window_info anchor="right" id="Bean Validation" order="11" />
+=======
+      <window_info anchor="bottom" id="Messages" order="18" weight="0.3289689" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.22147651" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
+      <window_info anchor="right" id="JRebel Setup Guide" order="9" weight="0.3295302" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1073,13 +1431,7 @@
     <SUITE FILE_PATH="coverage/springcloud_erp$ConsumerFeignApplication.ic" NAME="ConsumerFeignApplication Coverage Results" MODIFIED="1591153835395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-parent/2.3.0.RELEASE/spring-boot-starter-parent-2.3.0.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-parent/2.3.0.RELEASE/spring-boot-starter-parent-2.3.0.RELEASE.pom" />
     <entry file="file://$PROJECT_DIR$/eureka/src/main/resources/application.yml" />
     <entry file="file://$PROJECT_DIR$/eureka/src/main/java/com/lkc/EurekaApplication.java" />
     <entry file="file://$PROJECT_DIR$/eureka/pom.xml" />
@@ -1134,6 +1486,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/lkc/test/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -1208,6 +1561,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/lkc/service/UserService.java">
+=======
+    <entry file="file://$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/ProviderShopApplication.java">
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
@@ -1268,6 +1624,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/utils/AlipayConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1321,12 +1678,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+=======
+    <entry file="file://$PROJECT_DIR$/common/src/test/java/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-api/src/test/java/com/lkc/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/mapper/HelloMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-87">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provider-shop/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/lkc/model/Tree.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-feign/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/lkc/model/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-api/src/main/java/com/lkc/service/HelloService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1338,12 +1754,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
           <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+=======
+    <entry file="file://$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/service/HelloServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-128">
@@ -1397,6 +1824,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
           <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="26" selection-end-column="21" />
+=======
+    <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/resources/static/js/bootstrap3/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/resources/templates/tree.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/resources/templates/userList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+>>>>>>> a6aec7d51f86e55fc708c8cb0a50d30915cc10b8
         </state>
       </provider>
     </entry>

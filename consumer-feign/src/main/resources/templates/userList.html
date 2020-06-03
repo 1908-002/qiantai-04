@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{../css/bootstrap.css}"/>
+    <link rel="stylesheet" th:href="@{../css/bootstrap-table.css}"/>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>用户信息</h1>
+    <table class="table table-hover">
+        <thead>
+        <tr class="info">
+            <td>商品信息</td>
+            <td>单价</td>
+            <th>数量</th>
+            <th>商品操作</th>
+            <th>实付款</th>
+            <th>交易状态</th>
+            <th>交易操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--<tr th:each="user:${userList}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.jigoumingcheng}"></td>
+            <td th:text="${user.jibie}"></td>
+            <td th:text="${user.areaname}" ></td>
+            <td th:text="${user.jinbanren}"></td>
+            <td th:text="${user.lianxiren}"></td>
+
+            <td th:if="${user.type}==1">启用
+            <td th:if="${user.type}==2">禁用
+
+
+
+
+            <td>
+                <a th:href="@{/update(id=${user.id})}">Edit</a>
+            </td>
+            <td>
+                <a th:href="@{/delete(id=${user.id})}">Delete</a>
+            </td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
