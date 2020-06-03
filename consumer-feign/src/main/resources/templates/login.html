@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>登录</title>
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <link href="../css/login.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="login_box">
+<div class="login_l_img"><img src="img/login-img.png" /></div>
+<div class="login">
+    <div class="login_logo"><a href="#"><img src="../img/login_logo.png" /></a></div>
+    <div class="login_name">
+        <p>特卖商城</p>
+    </div>
+    <form id="loginForm">
+        <div class="modal-body" id = "model-body">
+            <div class="form-group">
+
+                <input type="text" name="iphone" id="phone" class="form-control"placeholder="手机号" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <input type="text" name="code" class="form-control" placeholder="短信验证码" autocomplete="off">
+                <a href="javascript:getPhoneCode()">获取验证码</a>
+            </div>
+        </div>
+        <input value="登录"   onclick="iphoneLogin()" type="button">
+        <!--// <input onclick="addUser()" style="width:50%;" value="注册"  type="button">-->
+        <a href="javaScript:addUser()">注册</a>
+        <a href="javaScript:zhanghao()">账号密码登录</a>
+    </form>
+    <div class="copyright">某某有限公司 版权所有©2016-2018 技术支持电话：000-00000000</div>
+</div>
+<script>
+    function iphoneLogin(){
+        $.ajax({
+            url: "../iphoneLogin",
+            type: "post",
+            data: $("#loginForm").serialize(),
+            success:function(data){
+                if(data.statusCode=="200"){
+                    location.href="../toMain";
+                }else{
+                    alert(data.message)
+                }
+
+            }
+        })
+        /*$("#loginForm").form("submit",{
+            url:"../iphoneLogin",
+            success:function(data){
+                data = JSON.parse(data);
+                $.messager.alert("提示",data.message,"info");
+                if(data.statusCode=="200"){
+                    location.href="../toMain.do";
+                }
+            }
+        });*/
+    }
+
+
+    function getPhoneCode(){
+        $.ajax({
+            url: "../getPhoneCode",
+            type: "post",
+            data: {iphone: $("#phone").val()},
+            success:function(data){
+                alert("验证码已发送");
+            }
+        })
+    }
+
+    function addUser(){
+        location.href="../toAddUser";
+    }
+    function zhanghao(){
+        location.href="../toLogin";
+    }
+
+</script>
+</body>
+</html>
