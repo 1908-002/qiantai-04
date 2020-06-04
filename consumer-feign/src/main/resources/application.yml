@@ -9,8 +9,12 @@ spring:
   thymeleaf:
     cache: false
     mode: LEGACYHTML5
+<<<<<<< HEAD
+
+=======
   main:
     allow-bean-definition-overriding: true
+>>>>>>> b0186584b24b8f4e6e587c30119e29f8b36eae62
 #  redis:
 #    database: 0
 #    host: 127.0.0.1
@@ -29,5 +33,6 @@ eureka:
 ribbon:
   ReadTimeout: 3000
   ConnectTimeout: 3000
+
 
 
