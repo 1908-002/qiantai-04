@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta http-equiv="Pragma" content="no-cache"> 
+<meta http-equiv="Cache-Control" content="no-cache"> 
+<meta http-equiv="Expires" content="0"> 
+<title>登录</title>
+<script src="../js/jquery-1.9.1.min.js"></script>
+<link href="../css/login.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="login_box">
+      <div class="login_l_img"><img src="img/login-img.png" /></div>
+      <div class="login">
+          <div class="login_logo"><a href="#"><img src="../img/login_logo.png" /></a></div>
+          <div class="login_name">
+               <p>特卖商城</p>
+          </div>
+
+          <form id="loginFormId">
+              <div class="modal-body" id = "model-body">
+                  <div class="form-group">
+
+                      <input type="text" name="userCode" class="form-control"placeholder="用户名" autocomplete="off">
+                  </div>
+                  <div class="form-group">
+                      <input type="password" name="password" class="form-control" placeholder="密码" autocomplete="off">
+                  </div>
+              </div>
+                  <input value="登录"   onclick="userLogin()" type="button">
+                 <!--// <input onclick="addUser()" style="width:50%;" value="注册"  type="button">-->
+                 <a href="javaScript:addUser()">注册</a>
+                 <a href="javaScript:dunxindlu()">短信登录</a>
+          </form>
+      <div class="copyright">某某有限公司 版权所有©2016-2018 技术支持电话：000-00000000</div>
+</div>
+<script>
+    function userLogin(){
+        $.ajax({
+            url: "../login",
+            type: "post",
+            data: $("#loginFormId").serialize(),
+            dataType: "text",
+            success:function(data){
+                alert(data);
+                if(data=="登录成功"){
+                    location.href="../toMain";
+                }
+            }
+        })
+    }
+    function addUser(){
+        location.href="../toAddUser";
+    }
+    function dunxindlu(){
+        location.href="../toLoginList";
+    }
+
+</script>
+</body>
+</html>

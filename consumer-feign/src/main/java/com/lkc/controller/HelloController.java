@@ -6,12 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import com.lkc.model.Tree;
+import com.lkc.model.UserEntity;
+import com.lkc.service.HelloService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 @Controller
 public class HelloController {
@@ -23,7 +29,12 @@ public class HelloController {
     @ResponseBody
     public String hello2(){
         return helloService.hello2();
+    }
 
+    @RequestMapping("/")
+    public String mian(){
+
+        return "tree";
     }
     //跳转到首页
     @RequestMapping("/toMain")
@@ -58,17 +69,47 @@ public class HelloController {
 
     @RequestMapping("/selectXQ")
     @ResponseBody
-    public ModelAndView selectXQ(Integer id){
+    public ModelAndView selectXQ(Integer id) {
 
 
         FangAn fangan = helloService.selectShuJu(id);
 
 
         ModelAndView mav = new ModelAndView();
-        mav.addObject("fangan",fangan);
+        mav.addObject("fangan", fangan);
         mav.setViewName("XiangQing");
         return mav;
     }
+
+        @RequestMapping("/tree")
+        @ResponseBody
+        public ModelAndView tree () {
+            ModelAndView mav = new ModelAndView();
+            mav.setViewName("userList");
+            return mav;
+        }
+
+
+        @RequestMapping("/selectTree")
+        @ResponseBody
+        public List<Tree> selectTree () {
+
+            return helloService.selectTree();
+        }
+
+        @RequestMapping("/userList")
+        @ResponseBody
+        public ModelAndView userList () {
+
+            List<UserEntity> userList = helloService.select();
+            ModelAndView mav = new ModelAndView();
+            mav.setViewName("userList");
+            mav.addObject("userList", userList);
+
+            return mav;
+
+
+        }
 
 
 }

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+</head>
+<body style="background: url(../static/img/bg1.jpg) no-repeat center center fixed; background-size: 100%;">
+<div class="modal-dialog" style="margin-top: 10%;">
+    <div class="modal-content">
+        <div class="modal-header">
+
+            <h4 class="modal-title text-center" id="myModalLabel">注册用户</h4>
+        </div>
+        <form id="loginFormId2">
+            <div class="modal-body" id = "model-body">
+                <div class="form-group">
+
+                    <input type="text" id="userCode" name="userCode" class="form-control"placeholder="账号" autocomplete="off" onblur="code()">
+                    <span id="code"></span>
+                </div>
+
+                <div class="form-group">
+
+                    <input type="text" id="userName" name="userName" class="form-control"placeholder="用户名" autocomplete="off" onblur="toName()">
+                    <span id="name"></span>
+                </div>
+
+                <div class="form-group">
+
+                    <input type="password" id="password" name="password" class="form-control" placeholder="密码" autocomplete="off"  onblur="pw()">
+                    <span id="word"></span>
+                </div>
+                <div class="form-group">
+
+                    <input type="password" id="password2" class="form-control" placeholder="确认密码" autocomplete="off"  onblur="qrmm()">
+                    <span id="qrmm"></span>
+                </div>
+
+                <div class="form-group">
+
+                    <input type="text" id="iphone" name="iphone" class="form-control" placeholder="手机号码" autocomplete="off"  onblur="phone()">
+                    <span id="iphone2"></span>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <div class="form-group">
+                    <input type="button" onclick="addUser()" value="注册" class="btn btn-primary form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="button" onclick="toLogin()" value="取消" class="btn btn-default form-control"/>
+                </div>
+            </div>
+        </form>
+    </div><!-- /.modal-content -->
+</div>
+<script>
+
+    //账号验证不为空
+    function code(){
+        var userCode=document.getElementById("userCode").value;
+        var code=document.getElementById("code");
+        var codezz=/^\w{1,16}$/;
+        if (codezz.test(userCode)) {
+            code.innerHTML="<font color='green'>√</font>";
+            return true;
+        } else{
+            code.innerHTML="<font color='red'>账号不能为空</font>";
+            return false;
+        }
+    }
+    //用户名验证
+    function toName(){
+        var userName=document.getElementById("userName").value;
+        var name=document.getElementById("name");
+        var pwzz=/^\w{3,16}$/;
+        if (pwzz.test(userName)) {
+            name.innerHTML="<font color='green'>√</font>";
+            return true;
+        } else{
+            name.innerHTML="<font color='red'>用户名可以是字母下划线数字组成3-16位</font>";
+            return false;
+        }
+    }
+    //密码验证
+    function pw(){
+        var password=document.getElementById("password").value;
+        var word=document.getElementById("word");
+        var pwzz=/^\w{3,16}$/;
+        if (pwzz.test(password)) {
+            word.innerHTML="<font color='green'>√</font>";
+            return true;
+        } else{
+            word.innerHTML="<font color='red'>密码由字母下划线数字组成3-16位</font>";
+            return false;
+        }
+    }
+    //确认密码
+    function qrmm(){
+        var password=document.getElementById("password").value;
+        var password2=document.getElementById("password2").value;
+        var qrmm=document.getElementById("qrmm");
+        var qrmmzz=/^\w{3,16}$/;
+        if (password2==password && qrmmzz.test(password2)) {
+            qrmm.innerHTML="<font color='green'>√</font>";
+            return true;
+        } else{
+            qrmm.innerHTML="<font color='red'>与密码保持一致</font>";
+            return false;
+        }
+    }
+
+    //手机号
+    function phone(){
+        var iphone=document.getElementById("iphone").value;
+        var iphone2=document.getElementById("iphone2");
+        var phone2zz=/^1(3|4|5|6|7|8|9)\d{9}$/;
+        if (phone2zz.test(iphone)) {
+            iphone2.innerHTML="<font color='green'>√</font>";
+            return true;
+        } else{
+            iphone2.innerHTML="<font color='red'>手机号必须是11位,必须13-19开头</font>";
+            return false;
+        }
+    }
+
+    //新增用户
+    function addUser(){
+        if (code() & pw() & qrmm() & toName() & phone()) {
+            $.ajax({
+                url: "../addUser",
+                type: "post",
+                data: $("#loginFormId2").serialize(),
+                dataType: "json",
+                success:function(){
+                    alert("注册成功");
+                    location.href="../toLogin";
+                }
+            })
+        }else{
+            alert("注册失败");
+        }
+    }
+
+    //取消跳回登录页面
+    function toLogin(){
+        location.href="../toLogin";
+    }
+
+
+</script>
+</body>
+</html>
