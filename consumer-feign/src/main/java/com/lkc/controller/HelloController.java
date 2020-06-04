@@ -42,17 +42,20 @@ public class HelloController {
         return "main";
     }
 
+    //跳转到方案馆
     @RequestMapping("/toFangAnGuAn")
     public String toFangAnGuAn(){
         return "FangAnGuAn";
     }
 
+    //查询数据库表里的数据并分页
     @GetMapping("/selectList")
     @ResponseBody
     public Map<String,Object> selectList(Integer page, Integer rows){
         return helloService.selectList(page,rows);
     }
 
+    //修改浏览量+1
     @PostMapping("/selectInfo")
     @ResponseBody
     public void selectInfo(Integer id){
@@ -60,6 +63,7 @@ public class HelloController {
 
     }
 
+    //修改下载量+1
     @PostMapping("/updateXia")
     @ResponseBody
     public void updateXia(Integer id){
@@ -67,6 +71,7 @@ public class HelloController {
 
     }
 
+    //查询数据并跳转到详情页面
     @RequestMapping("/selectXQ")
     @ResponseBody
     public ModelAndView selectXQ(Integer id) {
