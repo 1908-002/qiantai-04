@@ -30,6 +30,7 @@
         <div class="form-group">
             <div class="col-md-3">
                 <button type="button" onclick="search()" class="btn btn-info glyphicon glyphicon-search">查询</button>
+                <button type="button" onclick="delAll()" class="btn btn-danger glyphicon glyphicon-minus">全部删除</button>
             </div>
         </div>
 
@@ -67,7 +68,7 @@
                 };
             },
             columns:[[
-                {field:'id',title:'Id'},
+                {field:'id',title:'id',checkbox:true},
                 {field:'imgpath', title: '商品图片',
                     formatter:function(value,row,index){
                         return "<img src='"+value+"'width='40px' height='40px'/>"
@@ -148,6 +149,64 @@
                 }
             }
         })
+    }
+
+    function delAll(){
+        var deliveryArray  = $("#datatable").bootstrapTable("getSelections");
+
+        console.info(deliveryArray);
+        if(deliveryArray.length <= 0){
+            bootbox.alert({
+                size: "samll",
+                title: "提示",
+                message: "请选择要删除的商品。",
+                callback: function(){
+                }
+            });
+            return;
+        }
+
+        bootbox.confirm({
+            size: "samll",
+            title: "提示",
+            message: "确定要删除这"+ deliveryArray.length + "个订单吗？",
+            buttons: {
+                confirm: {
+                    label: '确定',
+                    className: 'btn-success'
+                },
+                cancel: {
+                    label: '取消',
+                    className: 'btn-danger'
+                }
+            },
+            callback:function(result){
+                if(result){
+                    var ids = "";
+                    for (var i = 0; i < deliveryArray.length; i++) {
+
+                        ids == ""?ids+=deliveryArray[i].id:ids+=","+deliveryArray[i].id;
+                    }
+
+                    $.ajax({
+                        url:"delAll",
+                        type:"post",
+                        data:{ids:ids},
+                        success:function(data){
+                            bootbox.alert({
+                                size: "samll",
+                                title: "提示",
+                                message: "删除成功",
+                                callback: function(){
+                                    $("#datatable").bootstrapTable("refresh");
+                                }
+                            });
+                        }
+                    })
+                }
+            }
+        })
+
     }
 </script>
 </body>

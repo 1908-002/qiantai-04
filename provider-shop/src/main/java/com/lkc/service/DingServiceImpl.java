@@ -30,7 +30,14 @@ public class DingServiceImpl implements DingService {
     }
 
     @Override
+    @RequestMapping("/delDD")
     public void delDD(Integer id) {
         dingMapper.delDD(id);
+    }
+
+    @Override
+    @RequestMapping("/delAll")
+    public void delAll(String ids) {
+        dingMapper.delAll(ids);
     }
 }

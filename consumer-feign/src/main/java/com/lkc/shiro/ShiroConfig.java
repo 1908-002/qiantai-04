@@ -34,6 +34,7 @@ public class ShiroConfig {
         //- logout :注销
         Map<String , String> map = new LinkedHashMap<>();
         map.put("/","anon");
+        map.put("/delAll","anon");
         map.put("/toDingDan","anon");
         map.put("/delDD","anon");
         map.put("/selectQbDD","anon");

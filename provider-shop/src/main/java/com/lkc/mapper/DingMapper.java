@@ -4,6 +4,7 @@ import com.lkc.model.OrderDetailEntity;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -26,4 +27,8 @@ public interface DingMapper {
 
     @Select("select count(1) from  order_detail d1,item i1 where d1.sku_id = i1.id and d1.orderstatus < 5 ")
     Integer getcount();
+
+
+    @Update("update order_detail set orderstatus = 5 where id in (${ids})")
+    void delAll(String ids);
 }

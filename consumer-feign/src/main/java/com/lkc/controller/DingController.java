@@ -31,4 +31,10 @@ public class DingController {
     public void delDD(Integer id){
         dingService.delDD(id);
     }
+
+    @RequestMapping("/delAll")
+    @ResponseBody
+    public void delAll(String ids){
+        dingService.delAll(ids);
+    }
 }
