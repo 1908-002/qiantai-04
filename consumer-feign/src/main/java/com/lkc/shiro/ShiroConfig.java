@@ -33,6 +33,11 @@ public class ShiroConfig {
         //- authc: 需要认证才能进行访问
         //- logout :注销
         Map<String , String> map = new LinkedHashMap<>();
+        map.put("/","anon");
+        map.put("/toDingDan","anon");
+        map.put("/delDD","anon");
+        map.put("/selectQbDD","anon");
+        map.put("/selectTree","anon");
         map.put("/logout","logout");//注销, 路径和value中的logout一定要一致，这是shiro提供的路径地址和value值
         map.put("/toLogin","anon");
         map.put("/login","anon");
