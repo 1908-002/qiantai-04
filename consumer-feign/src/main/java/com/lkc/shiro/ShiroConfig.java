@@ -34,6 +34,8 @@ public class ShiroConfig {
         //- logout :注销
         Map<String , String> map = new LinkedHashMap<>();
         map.put("/","anon");
+        map.put("/selecthsz","anon");
+        map.put("/toHuiShou","anon");
         map.put("/delAll","anon");
         map.put("/toDingDan","anon");
         map.put("/delDD","anon");
@@ -47,6 +49,7 @@ public class ShiroConfig {
         map.put("/toLoginList","anon");
         map.put("/getPhoneCode","anon");
         map.put("/iphoneLogin","anon");
+        map.put("/selectUserByCode","anon");
         //放开静态资源
         map.put("/js/**","anon");
         map.put("/css/**","anon");

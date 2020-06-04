@@ -34,6 +34,14 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <button type="button" onclick="huishou()" class="btn btn-warning glyphicon glyphicon-trash">订单回收站</button>
+            </div>
+        </div>
+
+
     </form>
 </div>
 
@@ -68,11 +76,13 @@
                 };
             },
             columns:[[
-                {field:'id',title:'id',checkbox:true},
+                {field:'s',title:'id',checkbox:true},
+                {field:'id', title: 'id'},
                 {field:'imgpath', title: '商品图片',
                     formatter:function(value,row,index){
                         return "<img src='"+value+"'width='40px' height='40px'/>"
-                    }	},
+                    }
+                },
                 {field:'order_id', title: '编号'},
                 {field:'sku_name', title: '商品名称'},
                 {field:'miaosu', title: '商品描述'},
@@ -153,7 +163,6 @@
 
     function delAll(){
         var deliveryArray  = $("#datatable").bootstrapTable("getSelections");
-
         console.info(deliveryArray);
         if(deliveryArray.length <= 0){
             bootbox.alert({
@@ -182,10 +191,11 @@
             },
             callback:function(result){
                 if(result){
-                    var ids = "";
-                    for (var i = 0; i < deliveryArray.length; i++) {
+                    let ids = "";
+                    for (let i = 0; i < deliveryArray.length; i++) {
 
                         ids == ""?ids+=deliveryArray[i].id:ids+=","+deliveryArray[i].id;
+
                     }
 
                     $.ajax({
@@ -207,6 +217,11 @@
             }
         })
 
+    }
+
+
+    function huishou() {
+      location.href="../toHuiShou";
     }
 </script>
 </body>

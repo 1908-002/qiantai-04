@@ -4,6 +4,7 @@ import com.lkc.service.DingService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.util.Map;
@@ -36,5 +37,18 @@ public class DingController {
     @ResponseBody
     public void delAll(String ids){
         dingService.delAll(ids);
+    }
+
+    @RequestMapping("/toHuiShou")
+    public String toHuiShou(){
+        return "huishou";
+    }
+
+    @RequestMapping("/selecthsz")
+    @ResponseBody
+    public Map<String,Object> selecthsz(Integer page, Integer rows) {
+
+
+        return dingService.selecthsz(page, rows);
     }
 }

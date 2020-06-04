@@ -46,8 +46,7 @@
     function intoTree(){
         $.ajax({
             url:"../selectTree",
-            type:"post",
-            dataType:"json",
+            type:"get",
             success:function(data){
                 $("#myTree").treeview({
                     data:data,

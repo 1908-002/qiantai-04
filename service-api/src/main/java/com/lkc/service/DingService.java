@@ -17,4 +17,7 @@ public interface DingService {
 
     @RequestMapping("/delAll")
     void delAll(@RequestParam("ids")  String ids);
+
+    @RequestMapping("/selecthsz")
+    Map<String, Object> selecthsz(@RequestParam("page") Integer page, @RequestParam("rows")Integer rows);
 }

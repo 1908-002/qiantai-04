@@ -4,6 +4,7 @@ import com.lkc.mapper.DingMapper;
 import com.lkc.model.OrderDetailEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -39,5 +40,17 @@ public class DingServiceImpl implements DingService {
     @RequestMapping("/delAll")
     public void delAll(String ids) {
         dingMapper.delAll(ids);
+    }
+
+    @Override
+    @RequestMapping("/selecthsz")
+    public Map<String, Object> selecthsz(@RequestParam("page") Integer page, @RequestParam("rows")Integer rows) {
+            Integer total = dingMapper.getcountHSZ();
+            List<OrderDetailEntity> list = dingMapper.selecthsz((page-1)*rows,rows);
+
+        Map<String,Object> hashMap = new HashMap<>();
+        hashMap.put("total",total);
+        hashMap.put("rows",list);
+        return hashMap;
     }
 }
