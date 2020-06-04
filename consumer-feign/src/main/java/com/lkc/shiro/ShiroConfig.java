@@ -34,6 +34,10 @@ public class ShiroConfig {
         //- logout :注销
         Map<String , String> map = new LinkedHashMap<>();
         map.put("/","anon");
+        map.put("/toMain","anon");
+        map.put("/toFangAnGuAn","anon");
+        map.put("/selectList","anon");
+        map.put("/selectInfo","anon");
         map.put("/toDingDan","anon");
         map.put("/delDD","anon");
         map.put("/selectQbDD","anon");
@@ -51,6 +55,9 @@ public class ShiroConfig {
         map.put("/css/**","anon");
         map.put("/images/**","anon");
         map.put("/img/**","anon");
+        map.put("/files/**","anon");
+        map.put("/script/**","anon");
+        map.put("/data/**","anon");
         //其他的都拦截
         map.put("/**","authc");
         // 将自定义的过滤器设置到shiro过滤器链中
