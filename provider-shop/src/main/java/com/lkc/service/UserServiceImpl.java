@@ -3,13 +3,11 @@ package com.lkc.service;
 import com.lkc.mapper.UserMapper;
 import com.lkc.model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.util.ByteSource;
 
 @RestController
-@Service
 public class UserServiceImpl implements UserService{
 
     @Autowired

@@ -9,13 +9,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient("provider-shop")
 public interface UserService {
 
+    @GetMapping("/selectUserByCode")
+    UserEntity selectUserByCode(@RequestParam String userName);
 
     @PostMapping("/iphoneLogin")
     UserEntity queryUserByPhone(UserEntity user);
 
     @PostMapping("/addUser")
-    UserEntity addUser(UserEntity userEntity);
+    UserEntity addUser(UserEntity user);
 
-    @GetMapping("/selectUserByCode")
-    UserEntity selectUserByCode(@RequestParam String userName);
+
 }

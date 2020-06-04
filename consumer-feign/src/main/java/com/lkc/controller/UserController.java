@@ -49,7 +49,7 @@ public class UserController {
     }
 
     //手机号验证
-    @PostMapping("/iphoneLogin")
+    @RequestMapping(value="/iphoneLogin",method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> iphoneLogin(UserEntity user, HttpServletRequest request){
 
