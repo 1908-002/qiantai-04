@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>商家列表</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-table.css" />
+
+    <script src="js/bootstrap-bootbox/bootbox.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap3/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="js/bootstrap3/css/bootstrap.css"/>
+
+    <link rel="stylesheet" href="js/bootstrap-treeview/bootstrap-treeview.min.css">
+    <script src="js/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+
+    <link rel="stylesheet" href="js/bootStrap-addTabs/bootstrap.addtabs.css">
+    <script src="js/bootStrap-addTabs/bootstrap.addtabs.min.js"></script>
+
+    <link rel="stylesheet" href="js/bootstrap-table/bootstrap-table.css" />
+    <script src="js/bootstrap-table/bootstrap-table.js"></script>
+    <script src="js/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+
+
+
+    <script src="js/bootstrap-fileinput/js/fileinput.js"></script>
+    <script src="js/bootstrap-fileinput/js/locales/zh.js"></script>
+    <link rel="stylesheet" href="/bootstrap-fileinput/css/fileinput.css">
+
+    <script src="js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="js/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <link rel="stylesheet" href="js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+
+</head>
+<body>
+<div id="toolbar">
+  <form class="form-inline" th:inline="none">
+
+    <div class="form-group">
+        <label class="col-sm-4 control-label">项目方案</label>
+        <div class="col-sm-6">
+        <input type="text" class="form-control" id="name" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-4 control-label">类型</label>
+        <div class="col-sm-6">
+        <input type="text" class="form-control" id="flAs" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-4">
+            <button type="button" onclick="search()" class="btn btn-info glyphicon glyphicon-search">查询</button>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-6">
+            <button type="reset" class="btn btn-warning glyphicon glyphicon-refresh">重置</button>
+        </div>
+    </div>
+  </form>
+</div>
+
+<table id="datatable" class="table table-hover"></table>
+
+<script type="text/javascript" th:inline="none">
+        $(function(){
+            initTable();
+        })
+        function initTable(){
+            $("#datatable").bootstrapTable({
+                toolbar:'#toolbar',
+                url: "../selectList",
+                pagination:true, //是否展示分页
+                pageList:[5,10,15],//分页组件
+                pageNumber:1,
+                pageSize:10,//默认每页条数
+                showColumns:false,//是否显示 内容列下拉框
+                showToggle:false,//是否显示 切换试图（table/card）按钮
+                showPaginationSwitch:false,//是否显示 数据条数选择框
+                showRefresh:false,//是否显示刷新按钮
+                detailView:false,//设置为 true 可以显示详细页面模式。
+                showFooter:false,//是否显示列脚
+                clickToSelect: true, //是否启用点击选中行
+                sidePagination:'server',//分页方式：client客户端分页，server服务端分页（*
+                queryParams:function(){
+                    return {
+                        page:this.pageNumber,
+                        rows:this.pageSize,
+                        //name:$("name").val(),
+                        //flAs:$("flAs").val(),
+                    };
+                },
+                columns:[[
+                    {field:'234',title:'id',checkbox: true},
+                    {field:'name',title:'项目方案名称'},
+                    {field:'data', title: '上传时间'},
+                    {field:'flAs', title: '服务', formatter:function(value,row,index){
+                            let status = "";
+                            if (value==1){
+                                status = "免费";
+                            }
+                            if (value==2){
+                                status = "付费";
+                            }
+                            if (value==3){
+                                status = "已付费";
+                            }
+
+                            return  status;
+                        }},
+                    {field:'liuLan', title: '浏览次数'},
+                    {field:'xiaZai', title: '下载次数'},
+                    {field:'cz', title: '操作',formatter:function (value, row, index) {
+                            return "<a href='javaScript:XG("+row.id+")'>查看    </a>" +
+                                "<a href = 'javaScript:Bj("+row.id+")'>下载</a>";
+                        }},
+                ]]
+            })
+        }
+        function XG(id){
+
+            $.ajax({
+                url:"../selectInfo",
+                type:"post",
+                data:{id:id},
+                success:function (data) {
+                    location.href="../selectXQ?id="+id;
+                }
+
+            })
+        }
+        function Bj(id){
+
+            $.ajax({
+                url:"../updateXia",
+                type:"post",
+                data:{id:id},
+                success:function (data) {
+                    location.href="../toFangAnGuAn"
+
+                }
+
+            })
+        }
+
+</script>
+</body>
+</html>
