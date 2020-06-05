@@ -19,6 +19,6 @@ public class OrderDetailEntity {
     private String imgpath;//商品照片
     private double shifukuan;//实付款
 
-
+    private Integer shangPinType;//商品类型
 
 }

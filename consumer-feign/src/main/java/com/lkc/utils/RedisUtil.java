@@ -11,19 +11,19 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * name£ºÓÃÓÚ·â×°RedisTemplate¹¤¾ßÊ¹ÓÃ£¬·â×°redis³£ÓÃ·½·¨
- * author£ºLiuC
- * date£º2020-04-01*/
-@Component  // ½«´ËÀà×÷ÎªspringÅäÖÃÎÄ¼þÀà£¬×¢ÈëspringÈÝÆ÷µ±ÖÐ
+ * nameï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½×°RedisTemplateï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã£ï¿½ï¿½ï¿½×°redisï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½
+ * authorï¿½ï¿½LiuC
+ * dateï¿½ï¿½2020-04-01*/
+@Component  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªspringï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½à£¬×¢ï¿½ï¿½springï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 public class RedisUtil {
 
     @Autowired
     private RedisTemplate redisTemplate;
 
     /**
-     * Ö¸¶¨»º´æÊ§Ð§Ê±¼ä
-     * @param key  ¼ü
-     * @param time Ê±¼ä(Ãë)
+     * Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§Ð§Ê±ï¿½ï¿½
+     * @param key  ï¿½ï¿½
+     * @param time Ê±ï¿½ï¿½(ï¿½ï¿½)
      * @return 30*/
     public boolean expire(String key, long time) {
         try {
@@ -40,12 +40,12 @@ public class RedisUtil {
 
     /**
      * 44
-     * ¸ù¾Ýkey »ñÈ¡¹ýÆÚÊ±¼ä
+     * ï¿½ï¿½ï¿½ï¿½key ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
      * 45
      *
-     * @param key ¼ü ²»ÄÜÎªnull
+     * @param key ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Îªnull
      *            46
-     * @return Ê±¼ä(Ãë) ·µ»Ø0´ú±íÎªÓÀ¾ÃÓÐÐ§
+     * @return Ê±ï¿½ï¿½(ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
      * 47
      */
 
@@ -57,12 +57,12 @@ public class RedisUtil {
 
     /**
      * 53
-     * ÅÐ¶ÏkeyÊÇ·ñ´æÔÚ
+     * ï¿½Ð¶ï¿½keyï¿½Ç·ï¿½ï¿½ï¿½ï¿½
      * 54
      *
-     * @param key ¼ü
+     * @param key ï¿½ï¿½
      *            55
-     * @return true ´æÔÚ false²»´æÔÚ
+     * @return true ï¿½ï¿½ï¿½ï¿½ falseï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      * 56
      */
 
@@ -84,10 +84,10 @@ public class RedisUtil {
 
     /**
      * 67
-     * É¾³ý»º´æ
+     * É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      * 68
      *
-     * @param key ¿ÉÒÔ´«Ò»¸öÖµ »ò¶à¸ö
+     * @param key ï¿½ï¿½ï¿½Ô´ï¿½Ò»ï¿½ï¿½Öµ ï¿½ï¿½ï¿½ï¿½
      *            69
      */
 
@@ -115,10 +115,10 @@ public class RedisUtil {
 
     /**
      * 83
-     * ÆÕÍ¨»º´æ»ñÈ¡
+     * ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½È¡
      * 84
      *
-     * @param key ¼ü
+     * @param key ï¿½ï¿½
      *            85
      * @return Öµ
      * 86
@@ -132,14 +132,14 @@ public class RedisUtil {
 
     /**
      * 92
-     * ÆÕÍ¨»º´æ·ÅÈë
+     * ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      * 93
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              94
      * @param value Öµ
      *              95
-     * @return true³É¹¦ falseÊ§°Ü
+     * @return trueï¿½É¹ï¿½ falseÊ§ï¿½ï¿½
      * 96
      */
 
@@ -163,16 +163,16 @@ public class RedisUtil {
 
     /**
      * 109
-     * ÆÕÍ¨»º´æ·ÅÈë²¢ÉèÖÃÊ±¼ä
+     * ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë²¢ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
      * 110
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              111
      * @param value Öµ
      *              112
-     * @param time  Ê±¼ä(Ãë) timeÒª´óÓÚ0 Èç¹ûtimeÐ¡ÓÚµÈÓÚ0 ½«ÉèÖÃÎÞÏÞÆÚ
+     * @param time  Ê±ï¿½ï¿½(ï¿½ï¿½) timeÒªï¿½ï¿½ï¿½ï¿½0 ï¿½ï¿½ï¿½timeÐ¡ï¿½Úµï¿½ï¿½ï¿½0 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      *              113
-     * @return true³É¹¦ false Ê§°Ü
+     * @return trueï¿½É¹ï¿½ false Ê§ï¿½ï¿½
      * 114
      */
 
@@ -204,12 +204,12 @@ public class RedisUtil {
 
     /**
      * 130
-     * µÝÔö
+     * ï¿½ï¿½ï¿½ï¿½
      * 131
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              132
-     * @param delta ÒªÔö¼Ó¼¸(´óÓÚ0)
+     * @param delta Òªï¿½ï¿½ï¿½Ó¼ï¿½(ï¿½ï¿½ï¿½ï¿½0)
      *              133
      * @return 134
      */
@@ -218,7 +218,7 @@ public class RedisUtil {
 
         if (delta < 0) {
 
-            throw new RuntimeException("µÝÔöÒò×Ó±ØÐë´óÓÚ0");
+            throw new RuntimeException("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0");
 
         }
 
@@ -228,12 +228,12 @@ public class RedisUtil {
 
     /**
      * 143
-     * µÝ¼õ
+     * ï¿½Ý¼ï¿½
      * 144
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              145
-     * @param delta Òª¼õÉÙ¼¸(Ð¡ÓÚ0)
+     * @param delta Òªï¿½ï¿½ï¿½Ù¼ï¿½(Ð¡ï¿½ï¿½0)
      *              146
      * @return 147
      */
@@ -242,7 +242,7 @@ public class RedisUtil {
 
         if (delta < 0) {
 
-            throw new RuntimeException("µÝ¼õÒò×Ó±ØÐë´óÓÚ0");
+            throw new RuntimeException("ï¿½Ý¼ï¿½ï¿½ï¿½ï¿½Ó±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0");
 
         }
 
@@ -257,9 +257,9 @@ public class RedisUtil {
      * HashGet
      * 158
      *
-     * @param key  ¼ü ²»ÄÜÎªnull
+     * @param key  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Îªnull
      *             159
-     * @param item Ïî ²»ÄÜÎªnull
+     * @param item ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Îªnull
      *             160
      * @return Öµ
      * 161
@@ -273,12 +273,12 @@ public class RedisUtil {
 
     /**
      * 167
-     * »ñÈ¡hashKey¶ÔÓ¦µÄËùÓÐ¼üÖµ
+     * ï¿½ï¿½È¡hashKeyï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½Öµ
      * 168
      *
-     * @param key ¼ü
+     * @param key ï¿½ï¿½
      *            169
-     * @return ¶ÔÓ¦µÄ¶à¸ö¼üÖµ
+     * @return ï¿½ï¿½Ó¦ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½Öµ
      * 170
      */
 
@@ -293,11 +293,11 @@ public class RedisUtil {
      * HashSet
      * 177
      *
-     * @param key ¼ü
+     * @param key ï¿½ï¿½
      *            178
-     * @param map ¶ÔÓ¦¶à¸ö¼üÖµ
+     * @param map ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
      *            179
-     * @return true ³É¹¦ false Ê§°Ü
+     * @return true ï¿½É¹ï¿½ false Ê§ï¿½ï¿½
      * 180
      */
 
@@ -321,16 +321,16 @@ public class RedisUtil {
 
     /**
      * 192
-     * HashSet ²¢ÉèÖÃÊ±¼ä
+     * HashSet ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
      * 193
      *
-     * @param key  ¼ü
+     * @param key  ï¿½ï¿½
      *             194
-     * @param map  ¶ÔÓ¦¶à¸ö¼üÖµ
+     * @param map  ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
      *             195
-     * @param time Ê±¼ä(Ãë)
+     * @param time Ê±ï¿½ï¿½(ï¿½ï¿½)
      *             196
-     * @return true³É¹¦ falseÊ§°Ü
+     * @return trueï¿½É¹ï¿½ falseÊ§ï¿½ï¿½
      * 197
      */
 
@@ -360,16 +360,16 @@ public class RedisUtil {
 
     /**
      * 212
-     * ÏòÒ»ÕÅhash±íÖÐ·ÅÈëÊý¾Ý,Èç¹û²»´æÔÚ½«´´½¨
+     * ï¿½ï¿½Ò»ï¿½ï¿½hashï¿½ï¿½ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½
      * 213
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              214
-     * @param item  Ïî
+     * @param item  ï¿½ï¿½
      *              215
      * @param value Öµ
      *              216
-     * @return true ³É¹¦ falseÊ§°Ü
+     * @return true ï¿½É¹ï¿½ falseÊ§ï¿½ï¿½
      * 217
      */
 
@@ -393,18 +393,18 @@ public class RedisUtil {
 
     /**
      * 229
-     * ÏòÒ»ÕÅhash±íÖÐ·ÅÈëÊý¾Ý,Èç¹û²»´æÔÚ½«´´½¨
+     * ï¿½ï¿½Ò»ï¿½ï¿½hashï¿½ï¿½ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½
      * 230
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              231
-     * @param item  Ïî
+     * @param item  ï¿½ï¿½
      *              232
      * @param value Öµ
      *              233
-     * @param time  Ê±¼ä(Ãë) ×¢Òâ:Èç¹ûÒÑ´æÔÚµÄhash±íÓÐÊ±¼ä,ÕâÀï½«»áÌæ»»Ô­ÓÐµÄÊ±¼ä
+     * @param time  Ê±ï¿½ï¿½(ï¿½ï¿½) ×¢ï¿½ï¿½:ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½Úµï¿½hashï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½,ï¿½ï¿½ï¿½ï½«ï¿½ï¿½ï¿½æ»»Ô­ï¿½Ðµï¿½Ê±ï¿½ï¿½
      *              234
-     * @return true ³É¹¦ falseÊ§°Ü
+     * @return true ï¿½É¹ï¿½ falseÊ§ï¿½ï¿½
      * 235
      */
 
@@ -434,12 +434,12 @@ public class RedisUtil {
 
     /**
      * 250
-     * É¾³ýhash±íÖÐµÄÖµ
+     * É¾ï¿½ï¿½hashï¿½ï¿½ï¿½Ðµï¿½Öµ
      * 251
      *
-     * @param key  ¼ü ²»ÄÜÎªnull
+     * @param key  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Îªnull
      *             252
-     * @param item Ïî ¿ÉÒÔÊ¹¶à¸ö ²»ÄÜÎªnull
+     * @param item ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Îªnull
      *             253
      */
 
@@ -451,14 +451,14 @@ public class RedisUtil {
 
     /**
      * 259
-     * ÅÐ¶Ïhash±íÖÐÊÇ·ñÓÐ¸ÃÏîµÄÖµ
+     * ï¿½Ð¶ï¿½hashï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ð¸ï¿½ï¿½ï¿½ï¿½Öµ
      * 260
      *
-     * @param key  ¼ü ²»ÄÜÎªnull
+     * @param key  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Îªnull
      *             261
-     * @param item Ïî ²»ÄÜÎªnull
+     * @param item ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Îªnull
      *             262
-     * @return true ´æÔÚ false²»´æÔÚ
+     * @return true ï¿½ï¿½ï¿½ï¿½ falseï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      * 263
      */
 
@@ -470,14 +470,14 @@ public class RedisUtil {
 
     /**
      * 269
-     * hashµÝÔö Èç¹û²»´æÔÚ,¾Í»á´´½¨Ò»¸ö ²¢°ÑÐÂÔöºóµÄÖµ·µ»Ø
+     * hashï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½Í»á´´ï¿½ï¿½Ò»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½
      * 270
      *
-     * @param key  ¼ü
+     * @param key  ï¿½ï¿½
      *             271
-     * @param item Ïî
+     * @param item ï¿½ï¿½
      *             272
-     * @param by   ÒªÔö¼Ó¼¸(´óÓÚ0)
+     * @param by   Òªï¿½ï¿½ï¿½Ó¼ï¿½(ï¿½ï¿½ï¿½ï¿½0)
      *             273
      * @return 274
      */
@@ -490,14 +490,14 @@ public class RedisUtil {
 
     /**
      * 280
-     * hashµÝ¼õ
+     * hashï¿½Ý¼ï¿½
      * 281
      *
-     * @param key  ¼ü
+     * @param key  ï¿½ï¿½
      *             282
-     * @param item Ïî
+     * @param item ï¿½ï¿½
      *             283
-     * @param by   Òª¼õÉÙ¼Ç(Ð¡ÓÚ0)
+     * @param by   Òªï¿½ï¿½ï¿½Ù¼ï¿½(Ð¡ï¿½ï¿½0)
      *             284
      * @return 285
      */
@@ -512,10 +512,10 @@ public class RedisUtil {
 
     /**
      * 292
-     * ¸ù¾Ýkey»ñÈ¡SetÖÐµÄËùÓÐÖµ
+     * ï¿½ï¿½ï¿½ï¿½keyï¿½ï¿½È¡Setï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½Öµ
      * 293
      *
-     * @param key ¼ü
+     * @param key ï¿½ï¿½
      *            294
      * @return 295
      */
@@ -538,14 +538,14 @@ public class RedisUtil {
 
     /**
      * 306
-     * ¸ù¾Ývalue´ÓÒ»¸ösetÖÐ²éÑ¯,ÊÇ·ñ´æÔÚ
+     * ï¿½ï¿½ï¿½ï¿½valueï¿½ï¿½Ò»ï¿½ï¿½setï¿½Ð²ï¿½Ñ¯,ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
      * 307
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              308
      * @param value Öµ
      *              309
-     * @return true ´æÔÚ false²»´æÔÚ
+     * @return true ï¿½ï¿½ï¿½ï¿½ falseï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      * 310
      */
 
@@ -567,14 +567,14 @@ public class RedisUtil {
 
     /**
      * 321
-     * ½«Êý¾Ý·ÅÈëset»º´æ
+     * ï¿½ï¿½ï¿½ï¿½ï¿½Ý·ï¿½ï¿½ï¿½setï¿½ï¿½ï¿½ï¿½
      * 322
      *
-     * @param key    ¼ü
+     * @param key    ï¿½ï¿½
      *               323
-     * @param values Öµ ¿ÉÒÔÊÇ¶à¸ö
+     * @param values Öµ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½
      *               324
-     * @return ³É¹¦¸öÊý
+     * @return ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½
      * 325
      */
 
@@ -596,16 +596,16 @@ public class RedisUtil {
 
     /**
      * 336
-     * ½«setÊý¾Ý·ÅÈë»º´æ
+     * ï¿½ï¿½setï¿½ï¿½ï¿½Ý·ï¿½ï¿½ë»ºï¿½ï¿½
      * 337
      *
-     * @param key    ¼ü
+     * @param key    ï¿½ï¿½
      *               338
-     * @param time   Ê±¼ä(Ãë)
+     * @param time   Ê±ï¿½ï¿½(ï¿½ï¿½)
      *               339
-     * @param values Öµ ¿ÉÒÔÊÇ¶à¸ö
+     * @param values Öµ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½
      *               340
-     * @return ³É¹¦¸öÊý
+     * @return ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½
      * 341
      */
 
@@ -633,10 +633,10 @@ public class RedisUtil {
 
     /**
      * 355
-     * »ñÈ¡set»º´æµÄ³¤¶È
+     * ï¿½ï¿½È¡setï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½
      * 356
      *
-     * @param key ¼ü
+     * @param key ï¿½ï¿½
      *            357
      * @return 358
      */
@@ -659,14 +659,14 @@ public class RedisUtil {
 
     /**
      * 369
-     * ÒÆ³ýÖµÎªvalueµÄ
+     * ï¿½Æ³ï¿½ÖµÎªvalueï¿½ï¿½
      * 370
      *
-     * @param key    ¼ü
+     * @param key    ï¿½ï¿½
      *               371
-     * @param values Öµ ¿ÉÒÔÊÇ¶à¸ö
+     * @param values Öµ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½
      *               372
-     * @return ÒÆ³ýµÄ¸öÊý
+     * @return ï¿½Æ³ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
      * 373
      */
 
@@ -692,14 +692,14 @@ public class RedisUtil {
 
     /**
      * 386
-     * »ñÈ¡list»º´æµÄÄÚÈÝ
+     * ï¿½ï¿½È¡listï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      * 387
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              388
-     * @param start ¿ªÊ¼
+     * @param start ï¿½ï¿½Ê¼
      *              389
-     * @param end   ½áÊø 0 µ½ -1´ú±íËùÓÐÖµ
+     * @param end   ï¿½ï¿½ï¿½ï¿½ 0 ï¿½ï¿½ -1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
      *              390
      * @return 391
      */
@@ -722,10 +722,10 @@ public class RedisUtil {
 
     /**
      * 402
-     * »ñÈ¡list»º´æµÄ³¤¶È
+     * ï¿½ï¿½È¡listï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½
      * 403
      *
-     * @param key ¼ü
+     * @param key ï¿½ï¿½
      *            404
      * @return 405
      */
@@ -748,12 +748,12 @@ public class RedisUtil {
 
     /**
      * 416
-     * Í¨¹ýË÷Òý »ñÈ¡listÖÐµÄÖµ
+     * Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¡listï¿½Ðµï¿½Öµ
      * 417
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              418
-     * @param index Ë÷Òý index>=0Ê±£¬ 0 ±íÍ·£¬1 µÚ¶þ¸öÔªËØ£¬ÒÀ´ÎÀàÍÆ£»index<0Ê±£¬-1£¬±íÎ²£¬-2µ¹ÊýµÚ¶þ¸öÔªËØ£¬ÒÀ´ÎÀàÍÆ
+     * @param index ï¿½ï¿½ï¿½ï¿½ index>=0Ê±ï¿½ï¿½ 0 ï¿½ï¿½Í·ï¿½ï¿½1 ï¿½Ú¶ï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½index<0Ê±ï¿½ï¿½-1ï¿½ï¿½ï¿½ï¿½Î²ï¿½ï¿½-2ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      *              419
      * @return 420
      */
@@ -776,10 +776,10 @@ public class RedisUtil {
 
     /**
      * 431
-     * ½«list·ÅÈë»º´æ
+     * ï¿½ï¿½listï¿½ï¿½ï¿½ë»ºï¿½ï¿½
      * 432
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              433
      * @param value Öµ
      *              434
@@ -805,11 +805,11 @@ public class RedisUtil {
     }
 
     /**
-     * ½«list·ÅÈë»º´æ
+     * ï¿½ï¿½listï¿½ï¿½ï¿½ë»ºï¿½ï¿½
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      * @param value Öµ
-     * @param time  Ê±¼ä(Ãë)
+     * @param time  Ê±ï¿½ï¿½(ï¿½ï¿½)
      * @return
      */
 
@@ -837,10 +837,10 @@ public class RedisUtil {
 
     /**
      * 467
-     * ½«list·ÅÈë»º´æ
+     * ï¿½ï¿½listï¿½ï¿½ï¿½ë»ºï¿½ï¿½
      * 468
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              469
      * @param value Öµ
      *              470
@@ -867,16 +867,16 @@ public class RedisUtil {
 
     /**
      * 484
-     * ½«list·ÅÈë»º´æ
+     * ï¿½ï¿½listï¿½ï¿½ï¿½ë»ºï¿½ï¿½
      * 485
      * <p>
      * 486
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              487
      * @param value Öµ
      *              488
-     * @param time  Ê±¼ä(Ãë)
+     * @param time  Ê±ï¿½ï¿½(ï¿½ï¿½)
      *              489
      * @return 490
      */
@@ -905,12 +905,12 @@ public class RedisUtil {
 
     /**
      * 504
-     * ¸ù¾ÝË÷ÒýÐÞ¸ÄlistÖÐµÄÄ³ÌõÊý¾Ý
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½listï¿½Ðµï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      * 505
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              506
-     * @param index Ë÷Òý
+     * @param index ï¿½ï¿½ï¿½ï¿½
      *              507
      * @param value Öµ
      *              508
@@ -937,16 +937,16 @@ public class RedisUtil {
 
     /**
      * 521
-     * ÒÆ³ýN¸öÖµÎªvalue
+     * ï¿½Æ³ï¿½Nï¿½ï¿½ÖµÎªvalue
      * 522
      *
-     * @param key   ¼ü
+     * @param key   ï¿½ï¿½
      *              523
-     * @param count ÒÆ³ý¶àÉÙ¸ö
+     * @param count ï¿½Æ³ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½
      *              524
      * @param value Öµ
      *              525
-     * @return ÒÆ³ýµÄ¸öÊý
+     * @return ï¿½Æ³ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
      * 526
      */
 
@@ -967,12 +967,12 @@ public class RedisUtil {
         }
 
     }
-    //»ñÈ¡ËùÓÐ¼ü
+    //ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ð¼ï¿½
     public Set<String> keys(String key){
         Set<String> keys = redisTemplate.keys(key);
         return keys;
     }
-    //É¾³ýËùÓÐ¼ü
+    //É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½
     public void delAllKeys(String key){
         Set<String> keys = redisTemplate.keys(key);
         redisTemplate.delete(keys);
