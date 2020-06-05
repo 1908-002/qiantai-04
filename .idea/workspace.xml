@@ -2,10 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3606848a-4cd2-4c98-a7c4-b1b76e8bfb66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/shiro/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/shiro/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/lkc/model/OrderDetailEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/lkc/model/OrderDetailEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/lkc/model/OrderDetailEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/lkc/model/OrderDetailEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/controller/ShuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/controller/ShuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/utils/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/java/com/lkc/utils/RedisUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data1.js" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data2.js" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data3.js" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data4.js" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data5.js" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data6.js" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data7.js" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/data7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/style2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/styles3.css" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/styles3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/styles4.css" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/styles4.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/styles5.css" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/styles5.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/styles6.css" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/styles6.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/styles7.css" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/static/files/home/styles7.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/AIBi.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/AIBi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/DiYiXia.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/DiYiXia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/FangAnGuAn.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/FangAnGuAn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/GouWu.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/GouWu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/GouWuXiangQing.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/GouWuXiangQing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/XiangQing.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/XiangQing.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider-shop/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/provider-shop/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/shang.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-feign/src/main/resources/templates/shang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/mapper/ShuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/mapper/ShuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/service/ShuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider-shop/src/main/java/com/lkc/service/ShuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-api/src/main/java/com/lkc/service/ShuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-api/src/main/java/com/lkc/service/ShuService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,19 +110,19 @@
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\实训1月\workspace\springcloud-erp\consumer-feign\src\main\resources\static\img" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lkc.mapper" />
+      <recent name="test" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\实训1月\workspace\springcloud-erp\consumer-feign\src\main\java\com\lkc\controller" />
       <recent name="E:\实训1月\workspace\springcloud-erp\consumer-feign\src\main\resources\static\img" />
       <recent name="E:\实训1月\workspace\springcloud-erp\consumer-feign\src\main\resources\templates" />
       <recent name="E:\实训1月\workspace\springcloud-erp\consumer-feign\src\main\resources\img" />
       <recent name="E:\实训1月\workspace\springcloud-erp\consumer-feign\src\main\resources\static\css" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.lkc.mapper" />
-      <recent name="test" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\实训1月\workspace\springcloud-erp\consumer-feign\src\main\resources\static\img" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ConsumerFeignApplication">

@@ -31,7 +31,7 @@ public class HelloController {
         return helloService.hello2();
     }
 
-    @RequestMapping("/DingDan")
+    @RequestMapping("/dingDan")
     public String mian(){
 
         return "tree";
@@ -47,6 +47,7 @@ public class HelloController {
     public String toFangAnGuAn(){
         return "FangAnGuAn";
     }
+
 
     //查询数据库表里的数据并分页
     @GetMapping("/selectList")
@@ -74,14 +75,10 @@ public class HelloController {
     //查询数据并跳转到详情页面
     @RequestMapping("/selectXQ")
     @ResponseBody
-    public ModelAndView selectXQ(Integer id) {
-
-
-        FangAn fangan = helloService.selectShuJu(id);
-
+    public ModelAndView selectXQ() {
 
         ModelAndView mav = new ModelAndView();
-        mav.addObject("fangan", fangan);
+
         mav.setViewName("XiangQing");
         return mav;
     }
