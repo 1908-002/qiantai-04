@@ -43,7 +43,7 @@
             data: $("#loginForm").serialize(),
             success:function(data){
                 if(data.statusCode=="200"){
-                    location.href="../";
+                    location.href="../toMain";
                 }else{
                     alert(data.message)
                 }
