@@ -37,7 +37,7 @@ public interface HelloService {
     List<UserEntity> select();
 
 
-    @RequestMapping("/selectTree")
+    @GetMapping("/selectTree")
     List<Tree> selectTree();
 
 

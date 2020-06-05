@@ -9,9 +9,15 @@ spring:
   thymeleaf:
     cache: false
     mode: LEGACYHTML5
+<<<<<<< HEAD
+
+  main:
+    allow-bean-definition-overriding: true
+=======
   main:
     allow-bean-definition-overriding: true
 
+>>>>>>> 6986f9ceb4a85a921fa8d0903e87aa2c17d4a7d9
 #  redis:
 #    database: 0
 #    host: 127.0.0.1
