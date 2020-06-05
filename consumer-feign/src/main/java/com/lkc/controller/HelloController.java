@@ -31,7 +31,7 @@ public class HelloController {
         return helloService.hello2();
     }
 
-    @RequestMapping("/")
+    @RequestMapping("/DingDan")
     public String mian(){
 
         return "tree";

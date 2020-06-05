@@ -20,4 +20,16 @@ public interface DingService {
 
     @RequestMapping("/selecthsz")
     Map<String, Object> selecthsz(@RequestParam("page") Integer page, @RequestParam("rows")Integer rows);
+
+    @RequestMapping("/selectdfk")
+    Map<String, Object> selectdfk(@RequestParam("page") Integer page, @RequestParam("rows")Integer rows);
+
+    @RequestMapping("/selectdfh")
+    Map<String, Object> selectdfh(@RequestParam("page") Integer page, @RequestParam("rows")Integer rows);
+
+    @RequestMapping("/selectdsh")
+    Map<String, Object> selectdsh(@RequestParam("page") Integer page, @RequestParam("rows")Integer rows);
+
+    @RequestMapping("/selectdpj")
+    Map<String, Object> selectdpj(@RequestParam("page") Integer page, @RequestParam("rows")Integer rows);
 }

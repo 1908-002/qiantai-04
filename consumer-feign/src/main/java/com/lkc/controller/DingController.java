@@ -19,6 +19,26 @@ public class DingController {
         return "DingDan";
     }
 
+    @RequestMapping("/toDfk")
+    public String toDfk(){
+        return "dfk";
+    }
+
+    @RequestMapping("/toDfh")
+    public String toDfh(){
+        return "dfh";
+    }
+
+    @RequestMapping("/toDsh")
+    public String toDsh(){
+        return "dsh";
+    }
+
+    @RequestMapping("/toDpj")
+    public String toDpj(){
+        return "dpj";
+    }
+
     @RequestMapping("/selectQbDD")
     @ResponseBody
     public Map<String,Object> selectQbDD(Integer page, Integer rows) {
@@ -51,4 +71,36 @@ public class DingController {
 
         return dingService.selecthsz(page, rows);
     }
+
+    @RequestMapping("/selectdfk")
+    @ResponseBody
+    public Map<String,Object> selectdfk(Integer page, Integer rows) {
+
+
+        return dingService.selectdfk(page, rows);
+    }
+    @RequestMapping("/selectdfh")
+    @ResponseBody
+    public Map<String,Object> selectdfh(Integer page, Integer rows) {
+
+
+        return dingService.selectdfh(page, rows);
+    }
+
+    @RequestMapping("/selectdsh")
+    @ResponseBody
+    public Map<String,Object> selectdsh(Integer page, Integer rows) {
+
+
+        return dingService.selectdsh(page, rows);
+    }
+    @RequestMapping("/selectdpj")
+    @ResponseBody
+    public Map<String,Object> selectdpj(Integer page, Integer rows) {
+
+
+        return dingService.selectdpj(page, rows);
+    }
+
+
 }
