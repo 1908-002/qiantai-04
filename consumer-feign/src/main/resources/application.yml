@@ -31,10 +31,8 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8090/eureka
-ribbon:
-  ReadTimeout: 3000
-  ConnectTimeout: 3000
+      defaultZone: http://127.0.0.1:8091/eureka
+
 
 
 
