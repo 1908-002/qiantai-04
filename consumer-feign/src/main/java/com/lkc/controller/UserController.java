@@ -3,9 +3,7 @@ package com.lkc.controller;
 import com.alibaba.fastjson.JSON;
 import com.lkc.model.UserEntity;
 import com.lkc.service.UserService;
-import com.lkc.utils.CheckSumBuilder;
-import com.lkc.utils.HttpClientUtil;
-import com.lkc.utils.MessageConstant;
+import com.lkc.utils.*;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UnknownAccountException;
@@ -14,18 +12,24 @@ import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.lang.annotation.IncompleteAnnotationException;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 @Controller
 public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private RedisUtil redisUtil;
 
 
     //shiro登录验证
@@ -75,9 +79,12 @@ public class UserController {
             Map<String, Integer> resultMap = JSON.parseObject(resultJson, Map.class);
             Integer resultCode = resultMap.get("code");
             if(resultCode != null && 200 == resultCode) {
+
+
                 request.getSession().setAttribute("user", dbUser);
                 map.put("statusCode", "200");
                 map.put("message", "登录成功");
+
             } else {
                 map.put("statusCode", "1002");
                 map.put("message", "短信验证错误");
@@ -91,10 +98,12 @@ public class UserController {
 
     }
 
+
+
     //发送手机验证码
     @PostMapping("/getPhoneCode")
     @ResponseBody
-    public String getPhoneCode(String iphone){
+    public String getPhoneCode(String iphone) {
 
         String nonceNum = String.valueOf(Math.round(Math.ceil(Math.random() * 100000 + 899999)));
         String timeMil = String.valueOf((new Date()).getTime() / 1000L);
@@ -111,12 +120,29 @@ public class UserController {
         headerParam.put("CurTime", timeMil);
         headerParam.put("CheckSum", CheckSumBuilder.getCheckSum(MessageConstant.APP_SECRET, nonceNum, timeMil));
 
-
-        String resultJson = HttpClientUtil.post3(MessageConstant.SERVER_URL, params, headerParam);
-        System.out.println(resultJson);
-        return resultJson;
+        /*Boolean phone = redisUtil.set(RedisContant.IPHOEN_LOGIN, "phone", 1);
+        if (phone) {
+            String resultJson = HttpClientUtil.post3(MessageConstant.SERVER_URL, params, headerParam);
+            System.out.println(resultJson);
+            return resultJson;
+        }*/
+        if (redisUtil.get(RedisContant.IPHOEN_LOGIN) != null) {
+            return "300";
+        }else{
+            String resultJson = HttpClientUtil.post3(MessageConstant.SERVER_URL, params, headerParam);
+            redisUtil.set(RedisContant.IPHOEN_LOGIN,resultJson,1);
+            System.out.println(resultJson);
+            return resultJson;
+        }
 
     }
+
+    /*//首页用户名显示
+    @GetMapping("/selectUserName")
+    @ResponseBody
+    public ModelAndView selectUserName(){
+
+    }*/
 
     //注册
     @PostMapping("/addUser")
@@ -135,6 +161,12 @@ public class UserController {
     @GetMapping("/toLoginList")
     public String toLoginList(){
         return "login";
+    }
+
+    //游客登陆
+    @GetMapping("/addYouKe")
+    public String addYouKe(){
+        return "main";
     }
 
     //跳转主页面

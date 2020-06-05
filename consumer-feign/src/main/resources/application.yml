@@ -17,24 +17,22 @@ spring:
 
 
 
-#  redis:
-#    database: 0
-#    host: 127.0.0.1
-#    port: 6379
-#    timeout: 6000ms
-#    jedis:
-#      pool:
-#        max-active: 200
-#        max-wait: -1ms
-#        max-idle: 10
-#        min-idle: 0
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    timeout: 6000ms
+    jedis:
+      pool:
+        max-active: 200
+        max-wait: -1ms
+        max-idle: 10
+        min-idle: 0
 eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8091/eureka
-ribbon:
-  ReadTimeout: 3000
-  ConnectTimeout: 3000
+
 
 
 
