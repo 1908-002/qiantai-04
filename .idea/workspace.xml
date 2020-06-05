@@ -76,7 +76,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
+            <state relative-caret-position="340">
               <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
@@ -466,7 +466,7 @@
       <workItem from="1591102160897" duration="2719000" />
       <workItem from="1591140783709" duration="13622000" />
       <workItem from="1591167976384" duration="12322000" />
-      <workItem from="1591317140963" duration="21549000" />
+      <workItem from="1591317140963" duration="22039000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1591102636426</created>
@@ -479,7 +479,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87108000" />
+    <option name="totallyTimeSpent" value="87598000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -505,12 +505,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.15147059" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49848714" visible="true" weight="0.36393443" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848714" weight="0.36393443" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32794118" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.27377048" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27377048" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5015129" side_tool="true" weight="0.22295082" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -965,7 +965,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/consumer-feign/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
+        <state relative-caret-position="340">
           <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
