@@ -35,6 +35,7 @@ public class ShiroConfig {
         Map<String , String> map = new LinkedHashMap<>();
         map.put("/","anon");
         map.put("/selecthsz","anon");
+        map.put("/aa","anon");
         map.put("/toHuiShou","anon");
         map.put("/delAll","anon");
         map.put("/toDingDan","anon");
