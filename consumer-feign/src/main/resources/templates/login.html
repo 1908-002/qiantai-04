@@ -70,7 +70,11 @@
             type: "post",
             data: {iphone: $("#phone").val()},
             success:function(data){
-                alert("验证码已发送");
+                if(data=="300"){
+                    alert("1分钟内无法再次发送");
+                }else{
+                    alert("验证码已发送");
+                }
             }
         })
     }
