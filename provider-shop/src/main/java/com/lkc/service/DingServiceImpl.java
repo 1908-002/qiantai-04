@@ -53,4 +53,52 @@ public class DingServiceImpl implements DingService {
         hashMap.put("rows",list);
         return hashMap;
     }
+
+    @Override
+    @RequestMapping("/selectdfk")
+    public Map<String, Object> selectdfk(Integer page, Integer rows) {
+        Integer total = dingMapper.getcountdfk();
+        List<OrderDetailEntity> list = dingMapper.selectdfk((page-1)*rows,rows);
+
+        Map<String,Object> hashMap = new HashMap<>();
+        hashMap.put("total",total);
+        hashMap.put("rows",list);
+        return hashMap;
+    }
+
+    @Override
+    @RequestMapping("/selectdfh")
+    public Map<String, Object> selectdfh(Integer page, Integer rows) {
+        Integer total = dingMapper.getcountdfh();
+        List<OrderDetailEntity> list = dingMapper.selectdfh((page-1)*rows,rows);
+
+        Map<String,Object> hashMap = new HashMap<>();
+        hashMap.put("total",total);
+        hashMap.put("rows",list);
+        return hashMap;
+    }
+
+    @Override
+    @RequestMapping("/selectdsh")
+    public Map<String, Object> selectdsh(Integer page, Integer rows) {
+        Integer total = dingMapper.getcountdsh();
+        List<OrderDetailEntity> list = dingMapper.selectdsh((page-1)*rows,rows);
+
+        Map<String,Object> hashMap = new HashMap<>();
+        hashMap.put("total",total);
+        hashMap.put("rows",list);
+        return hashMap;
+    }
+
+    @Override
+    @RequestMapping("/selectdpj")
+    public Map<String, Object> selectdpj(Integer page, Integer rows) {
+        Integer total = dingMapper.getcountdpj();
+        List<OrderDetailEntity> list = dingMapper.selectdpj((page-1)*rows,rows);
+
+        Map<String,Object> hashMap = new HashMap<>();
+        hashMap.put("total",total);
+        hashMap.put("rows",list);
+        return hashMap;
+    }
 }

@@ -1,10 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta http-equiv="Content-Type" content="textml; charset=UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{css/bootstrap-table.css}">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap3/js/bootstrap.js"></script>
+    <script src="js/bootstrap-bootbox/bootbox.js"></script>
+    <link rel="stylesheet" href="js/bootstrap3/css/bootstrap.css">
+    <script src="js/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <link rel="stylesheet" href="js/bootstrap-treeview/bootstrap-treeview.min.css">
+    <script src="js/bootStrap-addTabs/bootstrap.addtabs.js"></script>
+    <link rel="stylesheet" href="js/bootStrap-addTabs/bootstrap.addtabs.css">
+    <link rel="stylesheet" href="js/bootstrap-table/bootstrap-table.css">
+    <script src="js/bootstrap-table/bootstrap-table.js"></script>
+    <script src="js/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
 </head>
 <body>
-$END$
+<div id="toolbar">
+    <form class="form-inline">
+        <div class="form-group">
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="order_id" placeholder="输入订单号"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3">
+                <button type="button" onclick="search()" class="btn btn-info glyphicon glyphicon-search">查询</button>
+                <button type="button" onclick="delAll()" class="btn btn-danger glyphicon glyphicon-minus">全部删除</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <button type="button" onclick="huishou()" class="btn btn-warning glyphicon glyphicon-trash">订单回收站</button>
+            </div>
+        </div>
+
+
+    </form>
+</div>
+
+<table id="dfhtable" class="table table-hover"></table>
+
+<script type="text/javascript" th:inline="none">
+
+    $(function(){
+        initdfhTable();
+    })
+    function initdfhTable(){
+        $("#dfhtable").bootstrapTable({
+            toolbar:'#toolbar',
+            url: "selectdfh",
+            pagination:true,
+            pageList:[2, 3, 4, 50],//分页组件
+            pageNumber:1,
+            pageSize:5,//默认每页条数
+            showColumns:false,//是否显示 内容列下拉框
+            showToggle:false,//是否显示 切换试图（table/card）按钮
+            showPaginationSwitch:false,//是否显示 数据条数选择框
+            showRefresh:false,//是否显示刷新按钮
+            detailView:false,//设置为 true 可以显示详细页面模式。
+            showFooter:false,//是否显示列脚
+            clickToSelect: true, //是否启用点击选中行
+            sidePagination:'server',//分页方式：client客户端分页，server服务端分页（*
+            queryParams:function(){
+                return {
+                    page:this.pageNumber,
+                    rows:this.pageSize,
+                    order_id: $("#order_id").val(),
+                };
+            },
+            columns:[[
+                {field:'s',title:'id',checkbox:true},
+                {field:'id', title: 'id'},
+                {field:'imgpath', title: '商品图片',
+                    formatter:function(value,row,index){
+                        return "<img src='"+value+"'width='40px' height='40px'/>"
+                    }
+                },
+                {field:'order_id', title: '编号'},
+                {field:'sku_name', title: '商品名称'},
+                {field:'miaosu', title: '商品描述'},
+                {field:'order_price', title: '商品价钱'},
+                {field:'sku_num', title: '数量'},
+                {field:'shifukuan', title: '实付款'},
+                {field:'create_time', title: '创建时间'},
+                {field:'orderstatus', title: '状态',
+                    formatter: function(value,row,index){
+                        var status = "";
+                        if (value==1){
+                            status = "待付款";
+                        }
+                        if (value==2){
+                            status = "待发货";
+                        }
+                        if (value==3){
+                            status = "待收货";
+                        }
+                        if (value==4){
+                            status = "待评价";
+                        }
+
+                        return  status;
+
+                    }},
+                {field:'cz', title: '操作',
+                    formatter: function(value,row,index){
+                        return " <a href='javaScript:deleteInfo("+row.id+")'>删除</a>|"
+
+                    }
+                }
+            ]]
+        })
+    }
+
+    function search(){
+        $("#dfhtable").bootstrapTable("refresh");
+    }
+
+    function deleteInfo(id){
+
+        bootbox.confirm({
+            size: "samll",
+            title: "提示",
+            message: "确定要删除这位用户吗？",
+            buttons: {
+                confirm: {
+                    label: '确定',
+                    className: 'btn-success'
+                },
+                cancel: {
+                    label: '取消',
+                    className: 'btn-danger'
+                }
+            },
+            callback:function(result){
+                if(result){
+                    $.ajax({
+                        url:"delDD",
+                        data:{id:id},
+                        type:"post",
+                        success:function(data){
+                            bootbox.alert({
+                                size: "samll",
+                                title: "提示",
+                                message: "删除成功",
+                                callback: function(){
+                                    search();
+                                }
+                            });
+                        }
+                    })
+                }
+            }
+        })
+    }
+
+    function delAll(){
+        var deliveryArray  = $("#dfhtable").bootstrapTable("getSelections");
+        console.info(deliveryArray);
+        if(deliveryArray.length <= 0){
+            bootbox.alert({
+                size: "samll",
+                title: "提示",
+                message: "请选择要删除的商品。",
+                callback: function(){
+                }
+            });
+            return;
+        }
+
+        bootbox.confirm({
+            size: "samll",
+            title: "提示",
+            message: "确定要删除这"+ deliveryArray.length + "个订单吗？",
+            buttons: {
+                confirm: {
+                    label: '确定',
+                    className: 'btn-success'
+                },
+                cancel: {
+                    label: '取消',
+                    className: 'btn-danger'
+                }
+            },
+            callback:function(result){
+                if(result){
+                    let ids = "";
+                    for (let i = 0; i < deliveryArray.length; i++) {
+
+                        ids == ""?ids+=deliveryArray[i].id:ids+=","+deliveryArray[i].id;
+
+                    }
+
+                    $.ajax({
+                        url:"delAll",
+                        type:"post",
+                        data:{ids:ids},
+                        success:function(data){
+                            bootbox.alert({
+                                size: "samll",
+                                title: "提示",
+                                message: "删除成功",
+                                callback: function(){
+                                    $("#dfhtable").bootstrapTable("refresh");
+                                }
+                            });
+                        }
+                    })
+                }
+            }
+        })
+
+    }
+
+
+    function huishou() {
+        location.href="../toHuiShou";
+    }
+</script>
 </body>
-</html>
