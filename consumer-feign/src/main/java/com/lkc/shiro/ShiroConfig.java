@@ -50,6 +50,7 @@ public class ShiroConfig {
         map.put("/getPhoneCode","anon");
         map.put("/iphoneLogin","anon");
         map.put("/selectUserByCode","anon");
+        map.put("/addYouKe","anon");
         //放开静态资源
         map.put("/js/**","anon");
         map.put("/css/**","anon");

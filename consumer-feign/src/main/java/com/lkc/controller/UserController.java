@@ -14,6 +14,7 @@ import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.lang.annotation.IncompleteAnnotationException;
@@ -118,6 +119,13 @@ public class UserController {
 
     }
 
+    /*//首页用户名显示
+    @GetMapping("/selectUserName")
+    @ResponseBody
+    public ModelAndView selectUserName(){
+
+    }*/
+
     //注册
     @PostMapping("/addUser")
     @ResponseBody
@@ -135,6 +143,12 @@ public class UserController {
     @GetMapping("/toLoginList")
     public String toLoginList(){
         return "login";
+    }
+
+    //游客登陆
+    @GetMapping("/addYouKe")
+    public String addYouKe(){
+        return "main";
     }
 
     //跳转主页面
