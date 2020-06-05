@@ -1,7 +1,7 @@
 
 
 server:
-  port: 8081
+  port: 8082
 
 spring:
   application:
@@ -9,26 +9,25 @@ spring:
   thymeleaf:
     cache: false
     mode: LEGACYHTML5
-<<<<<<< HEAD
+
 
   main:
     allow-bean-definition-overriding: true
-=======
-  main:
-    allow-bean-definition-overriding: true
 
->>>>>>> 6986f9ceb4a85a921fa8d0903e87aa2c17d4a7d9
-#  redis:
-#    database: 0
-#    host: 127.0.0.1
-#    port: 6379
-#    timeout: 6000ms
-#    jedis:
-#      pool:
-#        max-active: 200
-#        max-wait: -1ms
-#        max-idle: 10
-#        min-idle: 0
+
+
+
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    timeout: 6000ms
+    jedis:
+      pool:
+        max-active: 200
+        max-wait: -1ms
+        max-idle: 10
+        min-idle: 0
 eureka:
   client:
     service-url:

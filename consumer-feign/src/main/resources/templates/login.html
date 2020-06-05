@@ -31,7 +31,8 @@
         <input value="登录"   onclick="iphoneLogin()" type="button">
         <!--// <input onclick="addUser()" style="width:50%;" value="注册"  type="button">-->
         <a href="javaScript:addUser()">注册</a>
-        <a href="javaScript:zhanghao()">账号密码登录</a>
+        <a href="javaScript:zhanghao()">账号密码登录</a><br/>
+        <a href="javaScript:addYouKe()">游客登录</a>
     </form>
     <div class="copyright">某某有限公司 版权所有©2016-2018 技术支持电话：000-00000000</div>
 </div>
@@ -43,7 +44,7 @@
             data: $("#loginForm").serialize(),
             success:function(data){
                 if(data.statusCode=="200"){
-                    location.href="../";
+                    location.href="../toMain";
                 }else{
                     alert(data.message)
                 }
@@ -69,7 +70,11 @@
             type: "post",
             data: {iphone: $("#phone").val()},
             success:function(data){
-                alert("验证码已发送");
+                if(data=="300"){
+                    alert("1分钟内无法再次发送");
+                }else{
+                    alert("验证码已发送");
+                }
             }
         })
     }
@@ -79,6 +84,10 @@
     }
     function zhanghao(){
         location.href="../toLogin";
+    }
+
+    function addYouKe(){
+        location.href="../addYouKe";
     }
 
 </script>

@@ -45,17 +45,17 @@
     </form>
 </div>
 
-<table id="datatable" class="table table-hover"></table>
+<table id="dfhtable" class="table table-hover"></table>
 
 <script type="text/javascript" th:inline="none">
 
     $(function(){
-        initTable();
+        initdfhTable();
     })
-    function initTable(){
-        $("#datatable").bootstrapTable({
+    function initdfhTable(){
+        $("#dfhtable").bootstrapTable({
             toolbar:'#toolbar',
-            url: "selectQbDD",
+            url: "selectdfh",
             pagination:true,
             pageList:[2, 3, 4, 50],//分页组件
             pageNumber:1,
@@ -120,7 +120,7 @@
     }
 
     function search(){
-        $("#datatable").bootstrapTable("refresh");
+        $("#dfhtable").bootstrapTable("refresh");
     }
 
     function deleteInfo(id){
@@ -162,7 +162,7 @@
     }
 
     function delAll(){
-        var deliveryArray  = $("#datatable").bootstrapTable("getSelections");
+        var deliveryArray  = $("#dfhtable").bootstrapTable("getSelections");
         console.info(deliveryArray);
         if(deliveryArray.length <= 0){
             bootbox.alert({
@@ -208,7 +208,7 @@
                                 title: "提示",
                                 message: "删除成功",
                                 callback: function(){
-                                    $("#datatable").bootstrapTable("refresh");
+                                    $("#dfhtable").bootstrapTable("refresh");
                                 }
                             });
                         }
@@ -221,7 +221,7 @@
 
 
     function huishou() {
-      location.href="../toHuiShou";
+        location.href="../toHuiShou";
     }
 </script>
 </body>
