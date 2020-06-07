@@ -113,5 +113,11 @@ public class HelloController {
 
         }
 
+    @RequestMapping("/aa")
+    public String aa(){
+
+        return "aaa";
+    }
+
 
 }

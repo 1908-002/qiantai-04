@@ -1,5 +1,6 @@
 package com.lkc.service;
 
+import com.lkc.Repository.EsRepository;
 import com.lkc.mapper.DingMapper;
 import com.lkc.model.OrderDetailEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,11 +19,31 @@ public class DingServiceImpl implements DingService {
     @Resource
     private DingMapper dingMapper;
 
+    @Resource
+    private EsRepository esRepository;
+
     @Override
     @RequestMapping("selectQbDD")
     public Map<String, Object> selectQbDD(Integer page, Integer rows) {
         Integer total = dingMapper.getcount();
         List<OrderDetailEntity> list = dingMapper.selectQbDD((page-1)*rows,rows);
+        for (OrderDetailEntity order: list) {
+            OrderDetailEntity entity = new OrderDetailEntity();
+            entity.setId(order.getId());
+            entity.setOrder_id(order.getOrder_id());
+            entity.setUser_id(order.getUser_id());
+            entity.setSku_id(order.getSku_id());
+            entity.setSku_name(order.getSku_name());
+            entity.setOrder_price(order.getOrder_price());
+            entity.setSku_num(order.getSku_num());
+            entity.setCreate_time(order.getCreate_time());
+            entity.setOrderstatus(order.getOrderstatus());
+            entity.setMiaosu(order.getMiaosu());
+            entity.setImgpath(order.getImgpath());
+            entity.setShifukuan(order.getShifukuan());
+            entity.setShangPinType(order.getShangPinType());
+            esRepository.save(entity);
+        }
 
         Map<String,Object> hashMap = new HashMap<>();
         hashMap.put("total",total);
