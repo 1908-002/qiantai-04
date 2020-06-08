@@ -24,7 +24,7 @@ public class DingServiceImpl implements DingService {
 
     @Override
     @RequestMapping("selectQbDD")
-    public Map<String, Object> selectQbDD(Integer page, Integer rows) {
+    public Map<String, Object> selectQbDD(@RequestParam Integer page,@RequestParam Integer rows) {
         Integer total = dingMapper.getcount();
         List<OrderDetailEntity> list = dingMapper.selectQbDD((page-1)*rows,rows);
         for (OrderDetailEntity order: list) {
@@ -53,13 +53,13 @@ public class DingServiceImpl implements DingService {
 
     @Override
     @RequestMapping("/delDD")
-    public void delDD(Integer id) {
+    public void delDD(@RequestParam Integer id) {
         dingMapper.delDD(id);
     }
 
     @Override
     @RequestMapping("/delAll")
-    public void delAll(String ids) {
+    public void delAll(@RequestParam String ids) {
         dingMapper.delAll(ids);
     }
 
