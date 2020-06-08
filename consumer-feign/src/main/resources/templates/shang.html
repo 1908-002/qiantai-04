@@ -827,7 +827,7 @@
             <div id="u5654_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u5655" class="text" style="visibility: visible;">
-                <p><span>加入购物车</span></p>
+                <p><span th:onclick="'javaScript:savaGouWu('+${order.getId()}+')'">加入购物车</span></p>
             </div>
         </div>
 
@@ -2112,6 +2112,19 @@ function goumai() {
     alert(shu)
 }
 
+function savaGouWu(id) {
+    alert(id);
+    $.ajax({
+        url:"savaGouWu",
+        data:{id,id},
+        type:"post",
+        dataType:"json",
+        success:function(){
+
+        }
+
+    })
+}
 
 </script>
 
