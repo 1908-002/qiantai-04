@@ -11,15 +11,15 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
 
-    url: jdbc:mysql://localhost:3306/1908?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
     username: root
-    password: 1234
+    password: 8520
   main:
     allow-bean-definition-overriding: true
 
 #  redis:
 #    database: 0
-#    host: 127.0.0.1 34se
+#    host: 127.0.0.1
 #    port: 6379
 #    timeout: 6000ms
 #    jedis:

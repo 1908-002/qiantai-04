@@ -26,10 +26,7 @@ public class ShuController {
         return mav;
     }
 
-    @RequestMapping("/GouWu")
-    public String gouwu(){
-        return "GouWu";
-    }
+
     @RequestMapping("/GouWuChe")
     public String GouWuChe(){
         return "GouWu";
@@ -49,5 +46,10 @@ public class ShuController {
     @RequestMapping("/GouWuc")
     public String GouWuc(){
         return "GouWu";
+    }
+
+    @RequestMapping("/aa")
+    public String aa(){
+        return "aa";
     }
 }

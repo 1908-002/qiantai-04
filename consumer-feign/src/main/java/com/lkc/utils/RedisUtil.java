@@ -11,20 +11,22 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * name�����ڷ�װRedisTemplate����ʹ�ã���װredis���÷���
- * author��LiuC
- * date��2020-04-01*/
-@Component  // ��������Ϊspring�����ļ��࣬ע��spring��������
+ * name：用于封装RedisTemplate工具使用，封装redis常用方法
+ * author：LiuC
+ * date：2020-04-01
+ */
+@Component  // 将此类作为spring配置文件类，注入spring容器当中
 public class RedisUtil {
 
     @Autowired
     private RedisTemplate redisTemplate;
 
     /**
-     * ָ������ʧЧʱ��
-     * @param key  ��
-     * @param time ʱ��(��)
-     * @return 30*/
+     * 指定缓存失效时间
+     * @param key  键
+     * @param time 时间(秒)
+     * @return 30
+     */
     public boolean expire(String key, long time) {
         try {
             if (time > 0) {
@@ -40,12 +42,12 @@ public class RedisUtil {
 
     /**
      * 44
-     * ����key ��ȡ����ʱ��
+     * 根据key 获取过期时间
      * 45
      *
-     * @param key �� ����Ϊnull
+     * @param key 键 不能为null
      *            46
-     * @return ʱ��(��) ����0����Ϊ������Ч
+     * @return 时间(秒) 返回0代表为永久有效
      * 47
      */
 
@@ -57,12 +59,12 @@ public class RedisUtil {
 
     /**
      * 53
-     * �ж�key�Ƿ����
+     * 判断key是否存在
      * 54
      *
-     * @param key ��
+     * @param key 键
      *            55
-     * @return true ���� false������
+     * @return true 存在 false不存在
      * 56
      */
 
@@ -84,10 +86,10 @@ public class RedisUtil {
 
     /**
      * 67
-     * ɾ������
+     * 删除缓存
      * 68
      *
-     * @param key ���Դ�һ��ֵ ����
+     * @param key 可以传一个值 或多个
      *            69
      */
 
@@ -115,12 +117,12 @@ public class RedisUtil {
 
     /**
      * 83
-     * ��ͨ�����ȡ
+     * 普通缓存获取
      * 84
      *
-     * @param key ��
+     * @param key 键
      *            85
-     * @return ֵ
+     * @return 值
      * 86
      */
 
@@ -132,14 +134,14 @@ public class RedisUtil {
 
     /**
      * 92
-     * ��ͨ�������
+     * 普通缓存放入
      * 93
      *
-     * @param key   ��
+     * @param key   键
      *              94
-     * @param value ֵ
+     * @param value 值
      *              95
-     * @return true�ɹ� falseʧ��
+     * @return true成功 false失败
      * 96
      */
 
@@ -163,16 +165,16 @@ public class RedisUtil {
 
     /**
      * 109
-     * ��ͨ������벢����ʱ��
+     * 普通缓存放入并设置时间
      * 110
      *
-     * @param key   ��
+     * @param key   键
      *              111
-     * @param value ֵ
+     * @param value 值
      *              112
-     * @param time  ʱ��(��) timeҪ����0 ���timeС�ڵ���0 ������������
+     * @param time  时间(秒) time要大于0 如果time小于等于0 将设置无限期
      *              113
-     * @return true�ɹ� false ʧ��
+     * @return true成功 false 失败
      * 114
      */
 
@@ -204,12 +206,12 @@ public class RedisUtil {
 
     /**
      * 130
-     * ����
+     * 递增
      * 131
      *
-     * @param key   ��
+     * @param key   键
      *              132
-     * @param delta Ҫ���Ӽ�(����0)
+     * @param delta 要增加几(大于0)
      *              133
      * @return 134
      */
@@ -218,7 +220,7 @@ public class RedisUtil {
 
         if (delta < 0) {
 
-            throw new RuntimeException("�������ӱ������0");
+            throw new RuntimeException("递增因子必须大于0");
 
         }
 
@@ -228,12 +230,12 @@ public class RedisUtil {
 
     /**
      * 143
-     * �ݼ�
+     * 递减
      * 144
      *
-     * @param key   ��
+     * @param key   键
      *              145
-     * @param delta Ҫ���ټ�(С��0)
+     * @param delta 要减少几(小于0)
      *              146
      * @return 147
      */
@@ -242,7 +244,7 @@ public class RedisUtil {
 
         if (delta < 0) {
 
-            throw new RuntimeException("�ݼ����ӱ������0");
+            throw new RuntimeException("递减因子必须大于0");
 
         }
 
@@ -257,11 +259,11 @@ public class RedisUtil {
      * HashGet
      * 158
      *
-     * @param key  �� ����Ϊnull
+     * @param key  键 不能为null
      *             159
-     * @param item �� ����Ϊnull
+     * @param item 项 不能为null
      *             160
-     * @return ֵ
+     * @return 值
      * 161
      */
 
@@ -273,12 +275,12 @@ public class RedisUtil {
 
     /**
      * 167
-     * ��ȡhashKey��Ӧ�����м�ֵ
+     * 获取hashKey对应的所有键值
      * 168
      *
-     * @param key ��
+     * @param key 键
      *            169
-     * @return ��Ӧ�Ķ����ֵ
+     * @return 对应的多个键值
      * 170
      */
 
@@ -293,11 +295,11 @@ public class RedisUtil {
      * HashSet
      * 177
      *
-     * @param key ��
+     * @param key 键
      *            178
-     * @param map ��Ӧ�����ֵ
+     * @param map 对应多个键值
      *            179
-     * @return true �ɹ� false ʧ��
+     * @return true 成功 false 失败
      * 180
      */
 
@@ -321,16 +323,16 @@ public class RedisUtil {
 
     /**
      * 192
-     * HashSet ������ʱ��
+     * HashSet 并设置时间
      * 193
      *
-     * @param key  ��
+     * @param key  键
      *             194
-     * @param map  ��Ӧ�����ֵ
+     * @param map  对应多个键值
      *             195
-     * @param time ʱ��(��)
+     * @param time 时间(秒)
      *             196
-     * @return true�ɹ� falseʧ��
+     * @return true成功 false失败
      * 197
      */
 
@@ -360,16 +362,16 @@ public class RedisUtil {
 
     /**
      * 212
-     * ��һ��hash���з�������,��������ڽ�����
+     * 向一张hash表中放入数据,如果不存在将创建
      * 213
      *
-     * @param key   ��
+     * @param key   键
      *              214
-     * @param item  ��
+     * @param item  项
      *              215
-     * @param value ֵ
+     * @param value 值
      *              216
-     * @return true �ɹ� falseʧ��
+     * @return true 成功 false失败
      * 217
      */
 
@@ -393,18 +395,18 @@ public class RedisUtil {
 
     /**
      * 229
-     * ��һ��hash���з�������,��������ڽ�����
+     * 向一张hash表中放入数据,如果不存在将创建
      * 230
      *
-     * @param key   ��
+     * @param key   键
      *              231
-     * @param item  ��
+     * @param item  项
      *              232
-     * @param value ֵ
+     * @param value 值
      *              233
-     * @param time  ʱ��(��) ע��:����Ѵ��ڵ�hash����ʱ��,���ｫ���滻ԭ�е�ʱ��
+     * @param time  时间(秒) 注意:如果已存在的hash表有时间,这里将会替换原有的时间
      *              234
-     * @return true �ɹ� falseʧ��
+     * @return true 成功 false失败
      * 235
      */
 
@@ -434,12 +436,12 @@ public class RedisUtil {
 
     /**
      * 250
-     * ɾ��hash���е�ֵ
+     * 删除hash表中的值
      * 251
      *
-     * @param key  �� ����Ϊnull
+     * @param key  键 不能为null
      *             252
-     * @param item �� ����ʹ��� ����Ϊnull
+     * @param item 项 可以使多个 不能为null
      *             253
      */
 
@@ -451,14 +453,14 @@ public class RedisUtil {
 
     /**
      * 259
-     * �ж�hash�����Ƿ��и����ֵ
+     * 判断hash表中是否有该项的值
      * 260
      *
-     * @param key  �� ����Ϊnull
+     * @param key  键 不能为null
      *             261
-     * @param item �� ����Ϊnull
+     * @param item 项 不能为null
      *             262
-     * @return true ���� false������
+     * @return true 存在 false不存在
      * 263
      */
 
@@ -470,14 +472,14 @@ public class RedisUtil {
 
     /**
      * 269
-     * hash���� ���������,�ͻᴴ��һ�� �����������ֵ����
+     * hash递增 如果不存在,就会创建一个 并把新增后的值返回
      * 270
      *
-     * @param key  ��
+     * @param key  键
      *             271
-     * @param item ��
+     * @param item 项
      *             272
-     * @param by   Ҫ���Ӽ�(����0)
+     * @param by   要增加几(大于0)
      *             273
      * @return 274
      */
@@ -490,14 +492,14 @@ public class RedisUtil {
 
     /**
      * 280
-     * hash�ݼ�
+     * hash递减
      * 281
      *
-     * @param key  ��
+     * @param key  键
      *             282
-     * @param item ��
+     * @param item 项
      *             283
-     * @param by   Ҫ���ټ�(С��0)
+     * @param by   要减少记(小于0)
      *             284
      * @return 285
      */
@@ -512,10 +514,10 @@ public class RedisUtil {
 
     /**
      * 292
-     * ����key��ȡSet�е�����ֵ
+     * 根据key获取Set中的所有值
      * 293
      *
-     * @param key ��
+     * @param key 键
      *            294
      * @return 295
      */
@@ -538,14 +540,14 @@ public class RedisUtil {
 
     /**
      * 306
-     * ����value��һ��set�в�ѯ,�Ƿ����
+     * 根据value从一个set中查询,是否存在
      * 307
      *
-     * @param key   ��
+     * @param key   键
      *              308
-     * @param value ֵ
+     * @param value 值
      *              309
-     * @return true ���� false������
+     * @return true 存在 false不存在
      * 310
      */
 
@@ -567,14 +569,14 @@ public class RedisUtil {
 
     /**
      * 321
-     * �����ݷ���set����
+     * 将数据放入set缓存
      * 322
      *
-     * @param key    ��
+     * @param key    键
      *               323
-     * @param values ֵ �����Ƕ��
+     * @param values 值 可以是多个
      *               324
-     * @return �ɹ�����
+     * @return 成功个数
      * 325
      */
 
@@ -596,16 +598,16 @@ public class RedisUtil {
 
     /**
      * 336
-     * ��set���ݷ��뻺��
+     * 将set数据放入缓存
      * 337
      *
-     * @param key    ��
+     * @param key    键
      *               338
-     * @param time   ʱ��(��)
+     * @param time   时间(秒)
      *               339
-     * @param values ֵ �����Ƕ��
+     * @param values 值 可以是多个
      *               340
-     * @return �ɹ�����
+     * @return 成功个数
      * 341
      */
 
@@ -633,10 +635,10 @@ public class RedisUtil {
 
     /**
      * 355
-     * ��ȡset����ĳ���
+     * 获取set缓存的长度
      * 356
      *
-     * @param key ��
+     * @param key 键
      *            357
      * @return 358
      */
@@ -659,14 +661,14 @@ public class RedisUtil {
 
     /**
      * 369
-     * �Ƴ�ֵΪvalue��
+     * 移除值为value的
      * 370
      *
-     * @param key    ��
+     * @param key    键
      *               371
-     * @param values ֵ �����Ƕ��
+     * @param values 值 可以是多个
      *               372
-     * @return �Ƴ��ĸ���
+     * @return 移除的个数
      * 373
      */
 
@@ -692,14 +694,14 @@ public class RedisUtil {
 
     /**
      * 386
-     * ��ȡlist���������
+     * 获取list缓存的内容
      * 387
      *
-     * @param key   ��
+     * @param key   键
      *              388
-     * @param start ��ʼ
+     * @param start 开始
      *              389
-     * @param end   ���� 0 �� -1��������ֵ
+     * @param end   结束 0 到 -1代表所有值
      *              390
      * @return 391
      */
@@ -722,10 +724,10 @@ public class RedisUtil {
 
     /**
      * 402
-     * ��ȡlist����ĳ���
+     * 获取list缓存的长度
      * 403
      *
-     * @param key ��
+     * @param key 键
      *            404
      * @return 405
      */
@@ -748,12 +750,12 @@ public class RedisUtil {
 
     /**
      * 416
-     * ͨ������ ��ȡlist�е�ֵ
+     * 通过索引 获取list中的值
      * 417
      *
-     * @param key   ��
+     * @param key   键
      *              418
-     * @param index ���� index>=0ʱ�� 0 ��ͷ��1 �ڶ���Ԫ�أ��������ƣ�index<0ʱ��-1����β��-2�����ڶ���Ԫ�أ���������
+     * @param index 索引 index>=0时， 0 表头，1 第二个元素，依次类推；index<0时，-1，表尾，-2倒数第二个元素，依次类推
      *              419
      * @return 420
      */
@@ -776,12 +778,12 @@ public class RedisUtil {
 
     /**
      * 431
-     * ��list���뻺��
+     * 将list放入缓存
      * 432
      *
-     * @param key   ��
+     * @param key   键
      *              433
-     * @param value ֵ
+     * @param value 值
      *              434
      * @return 436
      */
@@ -805,11 +807,11 @@ public class RedisUtil {
     }
 
     /**
-     * ��list���뻺��
+     * 将list放入缓存
      *
-     * @param key   ��
-     * @param value ֵ
-     * @param time  ʱ��(��)
+     * @param key   键
+     * @param value 值
+     * @param time  时间(秒)
      * @return
      */
 
@@ -837,12 +839,12 @@ public class RedisUtil {
 
     /**
      * 467
-     * ��list���뻺��
+     * 将list放入缓存
      * 468
      *
-     * @param key   ��
+     * @param key   键
      *              469
-     * @param value ֵ
+     * @param value 值
      *              470
      * @return 472
      */
@@ -867,16 +869,16 @@ public class RedisUtil {
 
     /**
      * 484
-     * ��list���뻺��
+     * 将list放入缓存
      * 485
      * <p>
      * 486
      *
-     * @param key   ��
+     * @param key   键
      *              487
-     * @param value ֵ
+     * @param value 值
      *              488
-     * @param time  ʱ��(��)
+     * @param time  时间(秒)
      *              489
      * @return 490
      */
@@ -905,14 +907,14 @@ public class RedisUtil {
 
     /**
      * 504
-     * ���������޸�list�е�ĳ������
+     * 根据索引修改list中的某条数据
      * 505
      *
-     * @param key   ��
+     * @param key   键
      *              506
-     * @param index ����
+     * @param index 索引
      *              507
-     * @param value ֵ
+     * @param value 值
      *              508
      * @return 509
      */
@@ -937,16 +939,16 @@ public class RedisUtil {
 
     /**
      * 521
-     * �Ƴ�N��ֵΪvalue
+     * 移除N个值为value
      * 522
      *
-     * @param key   ��
+     * @param key   键
      *              523
-     * @param count �Ƴ����ٸ�
+     * @param count 移除多少个
      *              524
-     * @param value ֵ
+     * @param value 值
      *              525
-     * @return �Ƴ��ĸ���
+     * @return 移除的个数
      * 526
      */
 
@@ -967,12 +969,12 @@ public class RedisUtil {
         }
 
     }
-    //��ȡ���м�
+    //获取所有键
     public Set<String> keys(String key){
         Set<String> keys = redisTemplate.keys(key);
         return keys;
     }
-    //ɾ�����м�
+    //删除所有键
     public void delAllKeys(String key){
         Set<String> keys = redisTemplate.keys(key);
         redisTemplate.delete(keys);

@@ -2,8 +2,10 @@ package com.lkc.model;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class ItemEntity {
+public class ItemEntity implements Serializable {
     private Integer id;//id
     private Double price;//价钱
     private Integer sku_name;//名称
