@@ -18,5 +18,4 @@ public interface UserService {
     @PostMapping("/addUser")
     UserEntity addUser(UserEntity user);
 
-
 }

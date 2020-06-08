@@ -34,14 +34,6 @@ public class ShiroConfig {
         //- logout :注销
         Map<String , String> map = new LinkedHashMap<>();
         map.put("/","anon");
-        map.put("/toMain","anon");
-        map.put("/toFangAnGuAn","anon");
-        map.put("/selectList","anon");
-        map.put("/selectInfo","anon");
-        map.put("/toDingDan","anon");
-        map.put("/delDD","anon");
-        map.put("/selectQbDD","anon");
-        map.put("/selectTree","anon");
         map.put("/logout","logout");//注销, 路径和value中的logout一定要一致，这是shiro提供的路径地址和value值
         map.put("/toLogin","anon");
         map.put("/login","anon");
@@ -51,6 +43,7 @@ public class ShiroConfig {
         map.put("/getPhoneCode","anon");
         map.put("/iphoneLogin","anon");
         map.put("/selectUserByCode","anon");
+        map.put("/addYouKe","anon");
         //放开静态资源
         map.put("/js/**","anon");
         map.put("/css/**","anon");

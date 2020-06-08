@@ -3,11 +3,13 @@ package com.lkc.controller;
 import com.lkc.model.OrderDetailEntity;
 import com.lkc.service.ShuService;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -27,6 +29,11 @@ public class ShuController {
     }
 
 
+
+    @RequestMapping("/GouWu")
+    public String gouwu(){
+        return "GouWu";
+    }
     @RequestMapping("/GouWuChe")
     public String GouWuChe(){
         return "GouWu";
@@ -46,10 +53,5 @@ public class ShuController {
     @RequestMapping("/GouWuc")
     public String GouWuc(){
         return "GouWu";
-    }
-
-    @RequestMapping("/aa")
-    public String aa(){
-        return "aa";
     }
 }
