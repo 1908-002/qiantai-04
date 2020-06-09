@@ -30,14 +30,14 @@ public class ShuController {
 
 
 
-    @RequestMapping("/GouWu")
+    /*@RequestMapping("/GouWu")
     public String gouwu(){
         return "GouWu";
     }
     @RequestMapping("/GouWuChe")
     public String GouWuChe(){
         return "GouWu";
-    }
+    }*/
     @RequestMapping("/DiYiXia")
     public String DiYiXia(){
         return "DiYiXia";

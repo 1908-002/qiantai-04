@@ -4,6 +4,7 @@ package com.lkc.service;
 import com.lkc.mapper.GouWuCheMapper;
 import com.lkc.model.GouWu;
 import com.lkc.model.OrderDetailEntity;
+
 import com.lkc.utils.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -53,7 +54,7 @@ public class GouWuCheServiceImpl implements GouWuCheService {
 
     @Override
     @PostMapping("/delectGwcById")
-    public void delectGwcById( @RequestParam("id") Integer id) {
+    public void delectGwcById(@RequestParam("id") Integer id) {
         gouWuCheMapper.delectGwcById(id);
     }
 
