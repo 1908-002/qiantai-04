@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>商品详情页</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" th:href="@{../css/bootstrap.css}" />
+    <link rel="stylesheet" th:href="@{../css/bootstrap-table.css}" />
     <link href="css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
     <link href="css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
     <link href="data/styles.css" type="text/css" rel="stylesheet"/>
@@ -279,7 +281,7 @@
         <div id="u3801_div" class=""></div>
         <!-- Unnamed () -->
         <div id="u3802" class="text" style="visibility: visible;">
-            <p><span>方案上传</span></p>
+            <p><span><a href="javaScript:FangAnShang()">方案上传</a></span></p>
         </div>
     </div>
 
@@ -288,7 +290,7 @@
         <div id="u3803_div" class=""></div>
         <!-- Unnamed () -->
         <div id="u3804" class="text" style="visibility: visible;">
-            <p><span>智慧校园网络建设方案</span></p>
+            <p><span th:text="${ids.name}"></span></p>
         </div>
     </div>
 
@@ -297,7 +299,7 @@
         <div id="u3805_div" class=""></div>
         <!-- Unnamed () -->
         <div id="u3806" class="text" style="visibility: visible;">
-            <p><span>2018-11-26 23:43:48发布</span></p>
+            <p><span th:text="${ids.data}"></span></p>
         </div>
     </div>
 
@@ -333,7 +335,7 @@
         <div id="u3813_div" class=""></div>
         <!-- Unnamed () -->
         <div id="u3814" class="text" style="visibility: visible;">
-            <p><span>87</span></p>
+            <p><span th:text="${ids.liuLan}"></span></p>
         </div>
     </div>
 
@@ -351,7 +353,7 @@
         <div id="u3817_div" class=""></div>
         <!-- Unnamed () -->
         <div id="u3818" class="text" style="visibility: visible;">
-            <p><span>2</span></p>
+            <p><span th:text="${ids.xiaZai}"></span></p>
         </div>
     </div>
 
@@ -383,7 +385,10 @@
                     <div id="u3824_div" class=""></div>
                     <!-- Unnamed () -->
                     <div id="u3825" class="text" style="visibility: visible;">
-                        <p><span>方案预览</span></p>
+                        <p><span>
+                           <img th:src="${ids.files}" th:height="120px" th:width="120px"/>
+                        </span>
+                        </p>
                     </div>
                 </div>
 
@@ -856,5 +861,10 @@
     <div id="u3929" class="ax_default">
     </div>
 </div>
+<script>
+    function FangAnShang() {
+         location.href="ShangChuan";
+    }
+</script>
 </body>
 </html>

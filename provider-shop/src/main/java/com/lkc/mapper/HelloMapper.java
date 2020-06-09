@@ -13,6 +13,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface HelloMapper {
@@ -22,14 +23,6 @@ public interface HelloMapper {
     @Select("select * from fangan limit #{page},#{rows} ")
     List<FangAn> selectfangan(Integer page, Integer rows);
 
-    @Update("update fangan set liulan = liuLan + 1 where id=#{id}")
-    void selectInfo(Integer id);
-
-    @Update("update fangan set xiazai = xiaZai + 1 where id=#{id}")
-    void updateXia(Integer id);
-
-    @Select("select * from fangan where id=#{id}")
-    FangAn selectShuJu(Integer id);
 
     @Select("select * from t_user_9 ")
     List<UserEntity> select();
@@ -42,4 +35,13 @@ public interface HelloMapper {
 
     @Select("select * from t_tree_9 where pid = #{id}")
     List<Tree> selectNodesById(Integer id);
+
+    @Select("select * from fangan")
+    List<FangAn> selectFangAnGuAn();
+
+    @Update("update fangan set liulan = liuLan + 1 where id=#{id}")
+    void selectXiang(Integer id);
+
+    @Select("select * from fangan where id=#{id}")
+    FangAn selectFangAnGuAn1(Integer id);
 }

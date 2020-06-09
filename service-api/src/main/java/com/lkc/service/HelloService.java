@@ -24,14 +24,6 @@ public interface HelloService {
     @GetMapping("/selectList")
     Map<String, Object> selectList(@RequestParam Integer page,@RequestParam Integer rows);
 
-    @PostMapping("/selectInfo")
-    void selectInfo(@RequestParam Integer id);
-
-    @PostMapping("/updateXia")
-    void updateXia(@RequestParam Integer id);
-
-    @GetMapping("/selectXQ")
-    FangAn selectShuJu(@RequestParam Integer id);
 
     @GetMapping("/select")
     List<UserEntity> select();
@@ -40,5 +32,10 @@ public interface HelloService {
     @GetMapping("/selectTree")
     List<Tree> selectTree();
 
+    @GetMapping("/toFangAnGuAn")
+    List<FangAn> selectFangAnGuAn();
 
+
+    @GetMapping("/selectXQ")
+    FangAn selectXiang(@RequestBody Integer id);
 }

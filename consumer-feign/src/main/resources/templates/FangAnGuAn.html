@@ -1,11 +1,13 @@
 
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>方案馆</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" th:href="@{../css/bootstrap.css}" />
+    <link rel="stylesheet" th:href="@{../css/bootstrap-table.css}" />
     <link href="css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
     <link href="css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
     <link href="data/styles.css" type="text/css" rel="stylesheet"/>
@@ -13,6 +15,7 @@
     <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet"/>
     <script src="scripts/jquery-1.7.1.min.js"></script>
     <script src="scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
     <script src="scripts/axure/axQuery.js"></script>
     <script src="scripts/axure/globals.js"></script>
     <script src="scripts/axutils.js"></script>
@@ -51,119 +54,10 @@
     </script>
 </head>
 <body>
-<div id="base" class="">
+<div id="base" class="" >
 
     <!-- Unnamed (组合) -->
-    <div id="u3294" class="ax_default">
 
-        <!-- Unnamed (矩形) -->
-        <div id="u3295" class="ax_default box_2">
-            <div id="u3295_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3296" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3297" class="ax_default image">
-            <img id="u3297_img" class="img " src="../images/home/u3297.png"/>
-            <!-- Unnamed () -->
-            <div id="u3298" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3299" class="ax_default label">
-            <div id="u3299_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3300" class="text" style="visibility: visible;">
-                <p><span>智慧校园智能感知系统解决方案</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3301" class="ax_default image">
-            <img id="u3301_img" class="img " src="../images/home/u3301.svg"/>
-            <!-- Unnamed () -->
-            <div id="u3302" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3303" class="ax_default label">
-            <div id="u3303_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3304" class="text" style="visibility: visible;">
-                <p><span>会员昵称</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3305" class="ax_default image">
-            <img id="u3305_img" class="img " src="../images/home/u3305.svg"/>
-            <!-- Unnamed () -->
-            <div id="u3306" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3307" class="ax_default label">
-            <div id="u3307_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3308" class="text" style="visibility: visible;">
-                <p><span>2019-8-30</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3309" class="ax_default label">
-            <div id="u3309_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3310" class="text" style="visibility: visible;">
-                <p><span>免费</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3311" class="ax_default label">
-            <div id="u3311_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3312" class="text" style="visibility: visible;">
-                <p><span>87</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3313" class="ax_default label">
-            <div id="u3313_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3314" class="text" style="visibility: visible;">
-                <p><span>浏览</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3315" class="ax_default label">
-            <div id="u3315_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3316" class="text" style="visibility: visible;">
-                <p><span>2</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3317" class="ax_default label">
-            <div id="u3317_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3318" class="text" style="visibility: visible;">
-                <p><span>下载</span></p>
-            </div>
-        </div>
-    </div>
 
     <!-- Unnamed (矩形) -->
     <div id="u3319" class="ax_default box_2">
@@ -616,9 +510,125 @@
         </div>
     </div>
 
-    <!-- Unnamed (组合) -->
-    <div id="u3419" class="ax_default">
 
+
+  <div th:each="yh,yhStat:${fangan}">
+    <div id="u3294" class="ax_default" >
+        <div th:if="${yhStat.index eq 0}"  onclick="successas()">
+            <span th:text="${yh.id}" id="ids"></span>
+        <!-- Unnamed (矩形) -->
+        <div id="u3295" class="ax_default box_2">
+            <div id="u3295_div" class=""></div>
+            <!-- Unnamed () -->
+            <div id="u3296" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u3297" class="ax_default image">
+            <img id="u3297_img" class="img " src="../images/home/u3297.png"/>
+            <!-- Unnamed () -->
+            <div id="u3298" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u3299" class="ax_default label">
+            <div id="u3299_div" class=""></div>
+            <!-- Unnamed () -->
+            <div id="u3300" class="text" style="visibility: visible;">
+                <p><span th:text="${yh.name}"></span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u3301" class="ax_default image">
+            <img id="u3301_img" class="img " src="../images/home/u3301.svg"/>
+            <!-- Unnamed () -->
+            <div id="u3302" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u3303" class="ax_default label">
+            <div id="u3303_div" class=""></div>
+            <!-- Unnamed () -->
+            <div id="u3304" class="text" style="visibility: visible;">
+                <p><span>会员昵称</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u3305" class="ax_default image">
+            <img id="u3305_img" class="img " src="../images/home/u3305.svg"/>
+            <!-- Unnamed () -->
+            <div id="u3306" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u3307" class="ax_default label">
+            <div id="u3307_div" class=""></div>
+            <!-- Unnamed () -->
+            <div id="u3308" class="text" style="visibility: visible;">
+                <p><span th:text="${yh.data}"></span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u3309" class="ax_default label">
+            <div id="u3309_div" class=""></div>
+            <!-- Unnamed () -->
+            <div id="u3310" class="text" style="visibility: visible;">
+                <p><span th:text="${yh.flAs}"></span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u3311" class="ax_default label">
+            <div id="u3311_div" class=""></div>
+            <!-- Unnamed () -->
+            <div id="u3312" class="text" style="visibility: visible;">
+                <p><span th:text="${yh.liuLan}"></span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u3313" class="ax_default label">
+            <div id="u3313_div" class=""></div>
+            <!-- Unnamed () -->
+            <div id="u3314" class="text" style="visibility: visible;">
+                <p><span>浏览</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u3315" class="ax_default label">
+            <div id="u3315_div" class=""></div>
+            <!-- Unnamed () -->
+            <div id="u3316" class="text" style="visibility: visible;">
+                <p><span th:text="${yh.xiaZai}"></span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u3317" class="ax_default label">
+            <div id="u3317_div" class=""></div>
+            <!-- Unnamed () -->
+            <div id="u3318" class="text" style="visibility: visible;">
+                <p><span>下载</span></p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Unnamed (组合) -->
+    <div id="u3419" class="ax_default" th:if="${yhStat.index eq 1}" onclick="successas1()">
+        <span th:text="${yh.id}" id="ids1"></span>
         <!-- Unnamed (矩形) -->
         <div id="u3420" class="ax_default box_2">
             <div id="u3420_div" class=""></div>
@@ -633,7 +643,7 @@
             <div id="u3422_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3423" class="text" style="visibility: visible;">
-                <p><span>智慧校园建设方案</span></p>
+                <p><span th:text="${yh.name}"></span></p>
             </div>
         </div>
 
@@ -669,7 +679,7 @@
             <div id="u3430_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3431" class="text" style="visibility: visible;">
-                <p><span>2019-8-30</span></p>
+                <p><span th:text="${yh.data}"></span></p>
             </div>
         </div>
 
@@ -678,7 +688,7 @@
             <div id="u3432_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3433" class="text" style="visibility: visible;">
-                <p><span>付费</span></p>
+                <p><span th:text="${yh.flAs}"></span></p>
             </div>
         </div>
 
@@ -687,7 +697,7 @@
             <div id="u3434_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3435" class="text" style="visibility: visible;">
-                <p><span>87</span></p>
+                <p><span th:text="${yh.liuLan}"></span></p>
             </div>
         </div>
 
@@ -705,7 +715,7 @@
             <div id="u3438_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3439" class="text" style="visibility: visible;">
-                <p><span>2</span></p>
+                <p><span th:text="${yh.xiaZai}"></span></p>
             </div>
         </div>
 
@@ -723,7 +733,7 @@
             <div id="u3442_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3443" class="text" style="visibility: visible;">
-                <p><span>1000AI币</span></p>
+                <p><span th:text="${yh.aiBi}"></span></p>
             </div>
         </div>
 
@@ -737,8 +747,10 @@
         </div>
     </div>
 
+
+
     <!-- Unnamed (组合) -->
-    <div id="u3446" class="ax_default">
+    <div id="u3446" class="ax_default" th:if="${yhStat.index eq 2}">
 
         <!-- Unnamed (矩形) -->
         <div id="u3447" class="ax_default box_2">
@@ -763,7 +775,7 @@
             <div id="u3451_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3452" class="text" style="visibility: visible;">
-                <p><span>智慧校园智能感知系统解决方案</span></p>
+                <p><span th:text="${yh.name}"></span></p>
             </div>
         </div>
 
@@ -799,7 +811,7 @@
             <div id="u3459_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3460" class="text" style="visibility: visible;">
-                <p><span>2019-8-30</span></p>
+                <p><span th:text="${yh.data}"></span></p>
             </div>
         </div>
 
@@ -808,7 +820,7 @@
             <div id="u3461_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3462" class="text" style="visibility: visible;">
-                <p><span>免费</span></p>
+                <p><span th:text="${yh.flAs}"></span></p>
             </div>
         </div>
 
@@ -817,7 +829,7 @@
             <div id="u3463_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3464" class="text" style="visibility: visible;">
-                <p><span>87</span></p>
+                <p><span th:text="${yh.liuLan}"></span></p>
             </div>
         </div>
 
@@ -835,7 +847,7 @@
             <div id="u3467_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3468" class="text" style="visibility: visible;">
-                <p><span>2</span></p>
+                <p><span th:text="${yh.xiaZai}"></span></p>
             </div>
         </div>
 
@@ -849,8 +861,9 @@
         </div>
     </div>
 
+
     <!-- Unnamed (组合) -->
-    <div id="u3471" class="ax_default">
+    <div id="u3471" class="ax_default" th:if="${yhStat.index eq 3}">
 
         <!-- Unnamed (矩形) -->
         <div id="u3472" class="ax_default box_2">
@@ -875,7 +888,7 @@
             <div id="u3476_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3477" class="text" style="visibility: visible;">
-                <p><span>智慧校园智能感知系统解决方案</span></p>
+                <p><span th:text="${yh.name}"></span></p>
             </div>
         </div>
 
@@ -911,7 +924,7 @@
             <div id="u3484_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3485" class="text" style="visibility: visible;">
-                <p><span>2019-8-30</span></p>
+                <p><span th:text="${yh.data}"></span></p>
             </div>
         </div>
 
@@ -920,7 +933,7 @@
             <div id="u3486_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3487" class="text" style="visibility: visible;">
-                <p><span>免费</span></p>
+                <p><span th:text="${yh.flAs}"></span></p>
             </div>
         </div>
 
@@ -929,7 +942,7 @@
             <div id="u3488_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3489" class="text" style="visibility: visible;">
-                <p><span>87</span></p>
+                <p><span th:text="${yh.liuLan}"></span></p>
             </div>
         </div>
 
@@ -947,7 +960,7 @@
             <div id="u3492_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3493" class="text" style="visibility: visible;">
-                <p><span>2</span></p>
+                <p><span th:text="${yh.xiaZai}"></span></p>
             </div>
         </div>
 
@@ -962,7 +975,7 @@
     </div>
 
     <!-- Unnamed (组合) -->
-    <div id="u3496" class="ax_default">
+    <div id="u3496" class="ax_default" th:if="${yhStat.index eq 4}">
 
         <!-- Unnamed (矩形) -->
         <div id="u3497" class="ax_default box_2">
@@ -987,7 +1000,7 @@
             <div id="u3501_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3502" class="text" style="visibility: visible;">
-                <p><span>智慧校园智能感知系统解决方案</span></p>
+                <p><span th:text="${yh.name}"></span></p>
             </div>
         </div>
 
@@ -1023,7 +1036,7 @@
             <div id="u3509_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3510" class="text" style="visibility: visible;">
-                <p><span>2019-8-30</span></p>
+                <p><span th:text="${yh.data}"></span></p>
             </div>
         </div>
 
@@ -1032,7 +1045,7 @@
             <div id="u3511_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3512" class="text" style="visibility: visible;">
-                <p><span>免费</span></p>
+                <p><span th:text="${yh.flAs}"></span></p>
             </div>
         </div>
 
@@ -1041,7 +1054,7 @@
             <div id="u3513_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3514" class="text" style="visibility: visible;">
-                <p><span>87</span></p>
+                <p><span th:text="${yh.liuLan}"></span></p>
             </div>
         </div>
 
@@ -1059,7 +1072,7 @@
             <div id="u3517_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3518" class="text" style="visibility: visible;">
-                <p><span>2</span></p>
+                <p><span th:text="${yh.xiaZai}"></span></p>
             </div>
         </div>
 
@@ -1074,7 +1087,7 @@
     </div>
 
     <!-- Unnamed (组合) -->
-    <div id="u3521" class="ax_default">
+    <div id="u3521" class="ax_default" th:if="${yhStat.index eq 5}">
 
         <!-- Unnamed (矩形) -->
         <div id="u3522" class="ax_default box_2">
@@ -1099,7 +1112,7 @@
             <div id="u3526_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3527" class="text" style="visibility: visible;">
-                <p><span>智慧校园智能感知系统解决方案</span></p>
+                <p><span th:text="${yh.name}"></span></p>
             </div>
         </div>
 
@@ -1135,7 +1148,7 @@
             <div id="u3534_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3535" class="text" style="visibility: visible;">
-                <p><span>2019-8-30</span></p>
+                <p><span th:text="${yh.data}"></span></p>
             </div>
         </div>
 
@@ -1144,7 +1157,7 @@
             <div id="u3536_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3537" class="text" style="visibility: visible;">
-                <p><span>免费</span></p>
+                <p><span th:text="${yh.flAs}"></span></p>
             </div>
         </div>
 
@@ -1153,7 +1166,7 @@
             <div id="u3538_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3539" class="text" style="visibility: visible;">
-                <p><span>87</span></p>
+                <p><span th:text="${yh.liuLan}"></span></p>
             </div>
         </div>
 
@@ -1171,7 +1184,7 @@
             <div id="u3542_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3543" class="text" style="visibility: visible;">
-                <p><span>2</span></p>
+                <p><span th:text="${yh.xiaZai}"></span></p>
             </div>
         </div>
 
@@ -1186,7 +1199,7 @@
     </div>
 
     <!-- Unnamed (组合) -->
-    <div id="u3546" class="ax_default">
+    <div id="u3546" class="ax_default" th:if="${yhStat.index eq 6}">
 
         <!-- Unnamed (矩形) -->
         <div id="u3547" class="ax_default box_2">
@@ -1211,7 +1224,7 @@
             <div id="u3551_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3552" class="text" style="visibility: visible;">
-                <p><span>智慧校园智能感知系统解决方案</span></p>
+                <p><span th:text="${yh.name}"></span></p>
             </div>
         </div>
 
@@ -1247,7 +1260,7 @@
             <div id="u3559_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3560" class="text" style="visibility: visible;">
-                <p><span>2019-8-30</span></p>
+                <p><span th:text="${yh.data}"></span></p>
             </div>
         </div>
 
@@ -1256,7 +1269,7 @@
             <div id="u3561_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3562" class="text" style="visibility: visible;">
-                <p><span>免费</span></p>
+                <p><span th:text="${yh.flAs}"></span></p>
             </div>
         </div>
 
@@ -1265,7 +1278,7 @@
             <div id="u3563_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3564" class="text" style="visibility: visible;">
-                <p><span>87</span></p>
+                <p><span th:text="${yh.liuLan}"></span></p>
             </div>
         </div>
 
@@ -1283,7 +1296,7 @@
             <div id="u3567_div" class=""></div>
             <!-- Unnamed () -->
             <div id="u3568" class="text" style="visibility: visible;">
-                <p><span>2</span></p>
+                <p><span th:text="${yh.xiaZai}"></span></p>
             </div>
         </div>
 
@@ -1296,6 +1309,610 @@
             </div>
         </div>
     </div>
+      <div id="u3617" class="ax_default" th:if="${yhStat.index eq 7}">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3618" class="ax_default box_2">
+              <div id="u3618_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3619" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3620" class="ax_default label">
+              <div id="u3620_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3621" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.name}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3622" class="ax_default image">
+              <img id="u3622_img" class="img " src="../images/home/u3301.svg"/>
+              <!-- Unnamed () -->
+              <div id="u3623" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3624" class="ax_default label">
+              <div id="u3624_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3625" class="text" style="visibility: visible;">
+                  <p><span>会员昵称</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3626" class="ax_default image">
+              <img id="u3626_img" class="img " src="../images/home/u3305.svg"/>
+              <!-- Unnamed () -->
+              <div id="u3627" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3628" class="ax_default label">
+              <div id="u3628_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3629" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.data}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3630" class="ax_default label">
+              <div id="u3630_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3631" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.flAs}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3632" class="ax_default label">
+              <div id="u3632_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3633" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.liuLan}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3634" class="ax_default label">
+              <div id="u3634_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3635" class="text" style="visibility: visible;">
+                  <p><span>浏览</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3636" class="ax_default label">
+              <div id="u3636_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3637" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.xiaZai}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3638" class="ax_default label">
+              <div id="u3638_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3639" class="text" style="visibility: visible;">
+                  <p><span>下载</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3640" class="ax_default label">
+              <div id="u3640_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3641" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.aiBi}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3642" class="ax_default image">
+              <img id="u3642_img" class="img " src="../images/home/u3444.png"/>
+              <!-- Unnamed () -->
+              <div id="u3643" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u3644" class="ax_default" th:if="${yhStat.index eq 8}">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3645" class="ax_default box_2">
+              <div id="u3645_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3646" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3647" class="ax_default label">
+              <div id="u3647_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3648" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.name}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3649" class="ax_default image">
+              <img id="u3649_img" class="img " src="../images/home/u3301.svg"/>
+              <!-- Unnamed () -->
+              <div id="u3650" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3651" class="ax_default label">
+              <div id="u3651_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3652" class="text" style="visibility: visible;">
+                  <p><span>会员昵称</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3653" class="ax_default image">
+              <img id="u3653_img" class="img " src="../images/home/u3305.svg"/>
+              <!-- Unnamed () -->
+              <div id="u3654" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3655" class="ax_default label">
+              <div id="u3655_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3656" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.data}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3657" class="ax_default label">
+              <div id="u3657_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3658" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.flAs}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3659" class="ax_default label">
+              <div id="u3659_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3660" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.liuLan}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3661" class="ax_default label">
+              <div id="u3661_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3662" class="text" style="visibility: visible;">
+                  <p><span>浏览</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3663" class="ax_default label">
+              <div id="u3663_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3664" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.xiaZai}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3665" class="ax_default label">
+              <div id="u3665_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3666" class="text" style="visibility: visible;">
+                  <p><span>下载</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3667" class="ax_default label">
+              <div id="u3667_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3668" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.aiBi}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3669" class="ax_default image">
+              <img id="u3669_img" class="img " src="../images/home/u3444.png"/>
+              <!-- Unnamed () -->
+              <div id="u3670" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u3671" class="ax_default" th:if="${yhStat.index eq 9}">
+          <!-- Unnamed (矩形) -->
+          <div id="u3672" class="ax_default box_2">
+              <div id="u3672_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3673" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3674" class="ax_default label">
+              <div id="u3674_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3675" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.name}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3676" class="ax_default image">
+              <img id="u3676_img" class="img " src="../images/home/u3301.svg"/>
+              <!-- Unnamed () -->
+              <div id="u3677" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3678" class="ax_default label">
+              <div id="u3678_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3679" class="text" style="visibility: visible;">
+                  <p><span>会员昵称</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3680" class="ax_default image">
+              <img id="u3680_img" class="img " src="../images/home/u3305.svg"/>
+              <!-- Unnamed () -->
+              <div id="u3681" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3682" class="ax_default label">
+              <div id="u3682_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3683" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.data}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3684" class="ax_default label">
+              <div id="u3684_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3685" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.flAs}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3686" class="ax_default label">
+              <div id="u3686_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3687" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.liuLan}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3688" class="ax_default label">
+              <div id="u3688_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3689" class="text" style="visibility: visible;">
+                  <p><span>浏览</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3690" class="ax_default label">
+              <div id="u3690_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3691" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.xiaZai}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3692" class="ax_default label">
+              <div id="u3692_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3693" class="text" style="visibility: visible;">
+                  <p><span>下载</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3694" class="ax_default label">
+              <div id="u3694_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3695" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.aiBi}">币</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3696" class="ax_default image">
+              <img id="u3696_img" class="img " src="../images/home/u3444.png"/>
+              <!-- Unnamed () -->
+              <div id="u3697" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u3698" class="ax_default" th:if="${yhStat.index eq 10}">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3699" class="ax_default box_2">
+              <div id="u3699_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3700" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3701" class="ax_default label">
+              <div id="u3701_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3702" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.name}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3703" class="ax_default image">
+              <img id="u3703_img" class="img " src="../images/home/u3301.svg"/>
+              <!-- Unnamed () -->
+              <div id="u3704" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3705" class="ax_default label">
+              <div id="u3705_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3706" class="text" style="visibility: visible;">
+                  <p><span>会员昵称</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3707" class="ax_default image">
+              <img id="u3707_img" class="img " src="../images/home/u3305.svg"/>
+              <!-- Unnamed () -->
+              <div id="u3708" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3709" class="ax_default label">
+              <div id="u3709_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3710" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.data}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3711" class="ax_default label">
+              <div id="u3711_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3712" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.flAs}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3713" class="ax_default label">
+              <div id="u3713_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3714" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.xiaZai}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3715" class="ax_default label">
+              <div id="u3715_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3716" class="text" style="visibility: visible;">
+                  <p><span>浏览</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3717" class="ax_default label">
+              <div id="u3717_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3718" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.xiaZai}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3719" class="ax_default label">
+              <div id="u3719_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3720" class="text" style="visibility: visible;">
+                  <p><span>下载</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3721" class="ax_default label">
+              <div id="u3721_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3722" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.aiBi}">AI币</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3723" class="ax_default image">
+              <img id="u3723_img" class="img " src="../images/home/u3444.png"/>
+              <!-- Unnamed () -->
+              <div id="u3724" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u3725" class="ax_default" th:if="${yhStat.index eq 11}">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3726" class="ax_default box_2">
+              <div id="u3726_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3727" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3728" class="ax_default label">
+              <div id="u3728_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3729" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.name}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3730" class="ax_default image">
+              <img id="u3730_img" class="img " src="../images/home/u3301.svg"/>
+              <!-- Unnamed () -->
+              <div id="u3731" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3732" class="ax_default label">
+              <div id="u3732_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3733" class="text" style="visibility: visible;">
+                  <p><span>会员昵称</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3734" class="ax_default image">
+              <img id="u3734_img" class="img " src="../images/home/u3305.svg"/>
+              <!-- Unnamed () -->
+              <div id="u3735" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3736" class="ax_default label">
+              <div id="u3736_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3737" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.data}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3738" class="ax_default label">
+              <div id="u3738_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3739" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.flAs}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3740" class="ax_default label">
+              <div id="u3740_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3741" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.xiaZai}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3742" class="ax_default label">
+              <div id="u3742_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3743" class="text" style="visibility: visible;">
+                  <p><span>浏览</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3744" class="ax_default label">
+              <div id="u3744_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3745" class="text" style="visibility: visible;">
+                  <p><span th:text="${yh.xiaZai}"></span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3746" class="ax_default label">
+              <div id="u3746_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3747" class="text" style="visibility: visible;">
+                  <p><span>下载</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u3748" class="ax_default label">
+              <div id="u3748_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u3749" class="text" style="visibility: visible;">
+                  <p><span  name="image" th:text="${yh.aiBi}">AI币</span></p>
+              </div>
+          </div>
+
+          <!-- Unnamed (图片) -->
+          <div id="u3750" class="ax_default image">
+              <img id="u3750_img" class="img " src="../images/home/u3444.png"/>
+              <!-- Unnamed () -->
+              <div id="u3751" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+              </div>
+          </div>
+      </div>
+  </div>
+
 
     <!-- Unnamed (组合) -->
     <div id="u3571" class="ax_default">
@@ -1502,609 +2119,24 @@
     </div>
 
     <!-- Unnamed (组合) -->
-    <div id="u3617" class="ax_default">
 
-        <!-- Unnamed (矩形) -->
-        <div id="u3618" class="ax_default box_2">
-            <div id="u3618_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3619" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3620" class="ax_default label">
-            <div id="u3620_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3621" class="text" style="visibility: visible;">
-                <p><span>智慧校园建设方案</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3622" class="ax_default image">
-            <img id="u3622_img" class="img " src="../images/home/u3301.svg"/>
-            <!-- Unnamed () -->
-            <div id="u3623" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3624" class="ax_default label">
-            <div id="u3624_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3625" class="text" style="visibility: visible;">
-                <p><span>会员昵称</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3626" class="ax_default image">
-            <img id="u3626_img" class="img " src="../images/home/u3305.svg"/>
-            <!-- Unnamed () -->
-            <div id="u3627" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3628" class="ax_default label">
-            <div id="u3628_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3629" class="text" style="visibility: visible;">
-                <p><span>2019-8-30</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3630" class="ax_default label">
-            <div id="u3630_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3631" class="text" style="visibility: visible;">
-                <p><span>付费</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3632" class="ax_default label">
-            <div id="u3632_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3633" class="text" style="visibility: visible;">
-                <p><span>87</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3634" class="ax_default label">
-            <div id="u3634_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3635" class="text" style="visibility: visible;">
-                <p><span>浏览</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3636" class="ax_default label">
-            <div id="u3636_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3637" class="text" style="visibility: visible;">
-                <p><span>2</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3638" class="ax_default label">
-            <div id="u3638_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3639" class="text" style="visibility: visible;">
-                <p><span>下载</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3640" class="ax_default label">
-            <div id="u3640_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3641" class="text" style="visibility: visible;">
-                <p><span>1000AI币</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3642" class="ax_default image">
-            <img id="u3642_img" class="img " src="../images/home/u3444.png"/>
-            <!-- Unnamed () -->
-            <div id="u3643" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Unnamed (组合) -->
-    <div id="u3644" class="ax_default">
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3645" class="ax_default box_2">
-            <div id="u3645_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3646" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3647" class="ax_default label">
-            <div id="u3647_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3648" class="text" style="visibility: visible;">
-                <p><span>智慧校园建设方案</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3649" class="ax_default image">
-            <img id="u3649_img" class="img " src="../images/home/u3301.svg"/>
-            <!-- Unnamed () -->
-            <div id="u3650" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3651" class="ax_default label">
-            <div id="u3651_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3652" class="text" style="visibility: visible;">
-                <p><span>会员昵称</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3653" class="ax_default image">
-            <img id="u3653_img" class="img " src="../images/home/u3305.svg"/>
-            <!-- Unnamed () -->
-            <div id="u3654" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3655" class="ax_default label">
-            <div id="u3655_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3656" class="text" style="visibility: visible;">
-                <p><span>2019-8-30</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3657" class="ax_default label">
-            <div id="u3657_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3658" class="text" style="visibility: visible;">
-                <p><span>付费</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3659" class="ax_default label">
-            <div id="u3659_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3660" class="text" style="visibility: visible;">
-                <p><span>87</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3661" class="ax_default label">
-            <div id="u3661_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3662" class="text" style="visibility: visible;">
-                <p><span>浏览</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3663" class="ax_default label">
-            <div id="u3663_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3664" class="text" style="visibility: visible;">
-                <p><span>2</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3665" class="ax_default label">
-            <div id="u3665_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3666" class="text" style="visibility: visible;">
-                <p><span>下载</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3667" class="ax_default label">
-            <div id="u3667_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3668" class="text" style="visibility: visible;">
-                <p><span>1000AI币</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3669" class="ax_default image">
-            <img id="u3669_img" class="img " src="../images/home/u3444.png"/>
-            <!-- Unnamed () -->
-            <div id="u3670" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Unnamed (组合) -->
-    <div id="u3671" class="ax_default">
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3672" class="ax_default box_2">
-            <div id="u3672_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3673" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3674" class="ax_default label">
-            <div id="u3674_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3675" class="text" style="visibility: visible;">
-                <p><span>智慧校园建设方案</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3676" class="ax_default image">
-            <img id="u3676_img" class="img " src="../images/home/u3301.svg"/>
-            <!-- Unnamed () -->
-            <div id="u3677" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3678" class="ax_default label">
-            <div id="u3678_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3679" class="text" style="visibility: visible;">
-                <p><span>会员昵称</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3680" class="ax_default image">
-            <img id="u3680_img" class="img " src="../images/home/u3305.svg"/>
-            <!-- Unnamed () -->
-            <div id="u3681" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3682" class="ax_default label">
-            <div id="u3682_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3683" class="text" style="visibility: visible;">
-                <p><span>2019-8-30</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3684" class="ax_default label">
-            <div id="u3684_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3685" class="text" style="visibility: visible;">
-                <p><span>付费</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3686" class="ax_default label">
-            <div id="u3686_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3687" class="text" style="visibility: visible;">
-                <p><span>87</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3688" class="ax_default label">
-            <div id="u3688_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3689" class="text" style="visibility: visible;">
-                <p><span>浏览</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3690" class="ax_default label">
-            <div id="u3690_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3691" class="text" style="visibility: visible;">
-                <p><span>2</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3692" class="ax_default label">
-            <div id="u3692_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3693" class="text" style="visibility: visible;">
-                <p><span>下载</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3694" class="ax_default label">
-            <div id="u3694_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3695" class="text" style="visibility: visible;">
-                <p><span>1000AI币</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3696" class="ax_default image">
-            <img id="u3696_img" class="img " src="../images/home/u3444.png"/>
-            <!-- Unnamed () -->
-            <div id="u3697" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Unnamed (组合) -->
-    <div id="u3698" class="ax_default">
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3699" class="ax_default box_2">
-            <div id="u3699_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3700" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3701" class="ax_default label">
-            <div id="u3701_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3702" class="text" style="visibility: visible;">
-                <p><span>智慧校园建设方案</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3703" class="ax_default image">
-            <img id="u3703_img" class="img " src="../images/home/u3301.svg"/>
-            <!-- Unnamed () -->
-            <div id="u3704" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3705" class="ax_default label">
-            <div id="u3705_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3706" class="text" style="visibility: visible;">
-                <p><span>会员昵称</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3707" class="ax_default image">
-            <img id="u3707_img" class="img " src="../images/home/u3305.svg"/>
-            <!-- Unnamed () -->
-            <div id="u3708" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3709" class="ax_default label">
-            <div id="u3709_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3710" class="text" style="visibility: visible;">
-                <p><span>2019-8-30</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3711" class="ax_default label">
-            <div id="u3711_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3712" class="text" style="visibility: visible;">
-                <p><span>付费</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3713" class="ax_default label">
-            <div id="u3713_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3714" class="text" style="visibility: visible;">
-                <p><span>87</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3715" class="ax_default label">
-            <div id="u3715_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3716" class="text" style="visibility: visible;">
-                <p><span>浏览</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3717" class="ax_default label">
-            <div id="u3717_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3718" class="text" style="visibility: visible;">
-                <p><span>2</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3719" class="ax_default label">
-            <div id="u3719_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3720" class="text" style="visibility: visible;">
-                <p><span>下载</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3721" class="ax_default label">
-            <div id="u3721_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3722" class="text" style="visibility: visible;">
-                <p><span>1000AI币</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3723" class="ax_default image">
-            <img id="u3723_img" class="img " src="../images/home/u3444.png"/>
-            <!-- Unnamed () -->
-            <div id="u3724" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Unnamed (组合) -->
-    <div id="u3725" class="ax_default">
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3726" class="ax_default box_2">
-            <div id="u3726_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3727" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3728" class="ax_default label">
-            <div id="u3728_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3729" class="text" style="visibility: visible;">
-                <p><span>智慧校园建设方案</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3730" class="ax_default image">
-            <img id="u3730_img" class="img " src="../images/home/u3301.svg"/>
-            <!-- Unnamed () -->
-            <div id="u3731" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3732" class="ax_default label">
-            <div id="u3732_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3733" class="text" style="visibility: visible;">
-                <p><span>会员昵称</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3734" class="ax_default image">
-            <img id="u3734_img" class="img " src="../images/home/u3305.svg"/>
-            <!-- Unnamed () -->
-            <div id="u3735" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3736" class="ax_default label">
-            <div id="u3736_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3737" class="text" style="visibility: visible;">
-                <p><span>2019-8-30</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3738" class="ax_default label">
-            <div id="u3738_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3739" class="text" style="visibility: visible;">
-                <p><span>付费</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3740" class="ax_default label">
-            <div id="u3740_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3741" class="text" style="visibility: visible;">
-                <p><span>87</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3742" class="ax_default label">
-            <div id="u3742_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3743" class="text" style="visibility: visible;">
-                <p><span>浏览</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3744" class="ax_default label">
-            <div id="u3744_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3745" class="text" style="visibility: visible;">
-                <p><span>2</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3746" class="ax_default label">
-            <div id="u3746_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3747" class="text" style="visibility: visible;">
-                <p><span>下载</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (矩形) -->
-        <div id="u3748" class="ax_default label">
-            <div id="u3748_div" class=""></div>
-            <!-- Unnamed () -->
-            <div id="u3749" class="text" style="visibility: visible;">
-                <p><span>1000AI币</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u3750" class="ax_default image">
-            <img id="u3750_img" class="img " src="../images/home/u3444.png"/>
-            <!-- Unnamed () -->
-            <div id="u3751" class="text" style="display: none; visibility: hidden">
-                <p><span></span></p>
-            </div>
-        </div>
-    </div>
 </div>
+<script>
+
+   /* let name = document.getElementsByTagName("div").valueOf();
+    alert(name)*/
+
+
+   function successas(){
+        let ids = $("#ids").html();
+        alert(ids);
+        window.location.href = "http://localhost:8082/selectXQ?id="+ids;
+   }
+   function successas1(){
+       let ids = $("#ids1").html();
+       alert(ids);
+       window.location.href = "http://localhost:8082/selectXQ?id="+ids;
+   }
+</script>
 </body>
 </html>

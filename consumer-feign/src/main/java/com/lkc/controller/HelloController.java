@@ -4,15 +4,12 @@ import com.lkc.model.FangAn;
 import com.lkc.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import com.lkc.model.Tree;
 import com.lkc.model.UserEntity;
 import com.lkc.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
@@ -44,8 +41,13 @@ public class HelloController {
 
     //跳转到方案馆
     @RequestMapping("/toFangAnGuAn")
-    public String toFangAnGuAn(){
-        return "FangAnGuAn";
+    @ResponseBody
+    public ModelAndView toFangAnGuAn(){
+        List<FangAn> fangan = helloService.selectFangAnGuAn();
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("fangan",fangan);
+        mav.setViewName("FangAnGuAn");
+        return mav;
     }
 
 
@@ -56,29 +58,14 @@ public class HelloController {
         return helloService.selectList(page,rows);
     }
 
-    //修改浏览量+1
-    @PostMapping("/selectInfo")
-    @ResponseBody
-    public void selectInfo(Integer id){
-        helloService.selectInfo(id);
-
-    }
-
-    //修改下载量+1
-    @PostMapping("/updateXia")
-    @ResponseBody
-    public void updateXia(Integer id){
-        helloService.updateXia(id);
-
-    }
 
     //查询数据并跳转到详情页面
     @RequestMapping("/selectXQ")
-    @ResponseBody
-    public ModelAndView selectXQ() {
+    public ModelAndView selectXQ(Integer id) {
+        FangAn ids = helloService.selectXiang(id);
 
         ModelAndView mav = new ModelAndView();
-
+        mav.addObject("ids",ids);
         mav.setViewName("XiangQing");
         return mav;
     }
