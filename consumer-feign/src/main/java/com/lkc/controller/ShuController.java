@@ -33,7 +33,7 @@ public class ShuController {
     }
 
     //跳到购物页面
-    @RequestMapping("/GouWu")
+   /* @RequestMapping("/GouWu")
     public String gouwu(){
         return "GouWu";
     }
@@ -41,7 +41,7 @@ public class ShuController {
     @RequestMapping("/GouWuChe")
     public String GouWuChe(){
         return "GouWu";
-    }
+    }*/
     //跳到第一次结算页
     @RequestMapping("/DiYiXia")
     public String DiYiXia(){

@@ -3,8 +3,10 @@ package com.lkc.model;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class GouWu {
+public class GouWu implements Serializable {
 
     private Integer gouwuid;
     private Integer sku_id;

@@ -1,13 +1,11 @@
 package com.lkc.service;
 
 import com.lkc.model.FangAn;
+import com.lkc.model.UserEntity;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 import com.lkc.model.Tree;
-import com.lkc.model.UserEntity;
-import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

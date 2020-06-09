@@ -7,9 +7,11 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 import org.springframework.stereotype.Repository;
 
+import java.io.Serializable;
+
 @Data
 @Document(indexName = "1908_order_index",type="1908_order_type")
-public class OrderDetailEntity {
+public class OrderDetailEntity implements Serializable {
 
     @Id
     private Integer id;//id

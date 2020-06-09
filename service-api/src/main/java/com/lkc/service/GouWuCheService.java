@@ -14,14 +14,14 @@ import java.util.List;
 public interface GouWuCheService {
 
     @RequestMapping("/savaGouwu")
-    OrderDetailEntity getItem(@RequestParam("id") Integer id);
+    OrderDetailEntity getItem(@RequestParam Integer id);
 
 
     @RequestMapping("/selectGouWu")
     List<GouWu> selectGouWu();
 
     @PostMapping("/delectGwcById")
-    void delectGwcById( @RequestParam("id") Integer id);
+    void delectGwcById( @RequestParam Integer id);
 
     @RequestMapping("/delAllGouWu")
     void delAllGouWu();

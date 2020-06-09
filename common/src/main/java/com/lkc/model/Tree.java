@@ -2,10 +2,11 @@ package com.lkc.model;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Data
-public class Tree {
+public class Tree implements Serializable {
 
     private Integer id;
     private String text;
