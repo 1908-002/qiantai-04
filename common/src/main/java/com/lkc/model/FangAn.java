@@ -8,9 +8,12 @@ import java.io.Serializable;
 public class FangAn implements Serializable {
     private Integer id;
     private String name;
-    private String img;
     private String data;
     private Integer liuLan;
     private Integer xiaZai;
-    private Integer flAs;
+    private String flAs;
+    private Integer aiBi;
+    private String bq;
+    private String files;
+
 }

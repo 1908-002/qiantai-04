@@ -16,7 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @RestController
 public class HelloServiceImpl implements HelloService{
 
-    @Autowired
+    @Resource
     private HelloMapper helloMapper;
 
 
@@ -38,23 +38,8 @@ public class HelloServiceImpl implements HelloService{
         return hashMap;
     }
 
-    @PostMapping("/selectInfo")
-    @Override
-    public void selectInfo(@RequestParam Integer id) {
-        helloMapper.selectInfo(id);
-    }
 
-    @PostMapping("/updateXia")
-    @Override
-    public void updateXia(@RequestParam Integer id) {
-        helloMapper.updateXia(id);
-    }
 
-    @RequestMapping("/selectXQ")
-    @Override
-    public FangAn selectShuJu(@RequestParam Integer id) {
-        return helloMapper.selectShuJu(id);
-    }
 
     @GetMapping("/select")
     @Override
@@ -84,5 +69,19 @@ public class HelloServiceImpl implements HelloService{
         return treeList;
     }
 
+    @RequestMapping("/toFangAnGuAn")
+    @Override
+    public List<FangAn> selectFangAnGuAn() {
+        return helloMapper.selectFangAnGuAn();
+    }
+
+    @RequestMapping("/selectXQ")
+    @Override
+    public FangAn selectXiang(@RequestBody Integer id) {
+        FangAn fangAns = helloMapper.selectFangAnGuAn1(id);
+        helloMapper.selectXiang(id);
+
+        return fangAns;
+    }
 
 }
