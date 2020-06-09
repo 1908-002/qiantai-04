@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.lang.annotation.IncompleteAnnotationException;
 import java.util.Date;
 import java.util.HashMap;
@@ -33,14 +34,24 @@ public class UserController {
 
 
     //shiro登录验证
-    @PostMapping("/login")
+    @RequestMapping(value="/login",method=RequestMethod.POST)
     @ResponseBody
-    public String login(UserEntity user){
+    public String login(UserEntity user, HttpSession session,HttpServletRequest request){
+
+
+
+
         Subject subject= SecurityUtils.getSubject();
         UsernamePasswordToken upt=new UsernamePasswordToken(user.getUserCode(),user.getPassword());
 
         try {
             subject.login(upt);
+
+            //user存session
+            session.setAttribute("user",user);
+            UserEntity user1 = (UserEntity) session.getAttribute("user");
+            session.setAttribute("value",user1.getUserCode());
+            System.out.println(user1);
             return "登录成功";
         }catch (UnknownAccountException uae){
             return "账号不存在";
@@ -137,11 +148,15 @@ public class UserController {
 
     }
 
-    /*//首页用户名显示
-    @GetMapping("/selectUserName")
+/*    //首页用户名显示
+    @GetMapping("/selectUser")
     @ResponseBody
-    public ModelAndView selectUserName(){
-
+    public ModelAndView selectUser(HttpSession session){
+        UserEntity user1 = (UserEntity) session.getAttribute("user");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("user2",user1);
+        modelAndView.setViewName("main");
+        return modelAndView;
     }*/
 
     //注册
@@ -171,7 +186,9 @@ public class UserController {
 
     //跳转主页面
     @GetMapping("/toMain")
-    public String toMain(){
+    public String toMain(HttpSession session){
+        /*UserEntity user1 = (UserEntity) sessi on.getAttribute("user");
+        session.setAttribute("value",user1.getUserCode());*/
         return "main";
     }
 

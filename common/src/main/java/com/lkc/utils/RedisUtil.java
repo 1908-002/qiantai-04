@@ -11,19 +11,19 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * name�����ڷ�װRedisTemplate����ʹ�ã���װredis���÷���
- * author��LiuC
- * date��2020-04-01*/
-@Component  // ��������Ϊspring�����ļ��࣬ע��spring��������
+ * name????????RedisTemplate???????????redis????????
+ * author??LiuC
+ * date??2020-04-01*/
+@Component  // ?????????spring????????????spring????????
 public class RedisUtil {
 
     @Autowired
     private RedisTemplate redisTemplate;
 
     /**
-     * ָ������ʧЧʱ��
-     * @param key  ��
-     * @param time ʱ��(��)
+     * ????????��????
+     * @param key  ??
+     * @param time ???(??)
      * @return 30*/
     public boolean expire(String key, long time) {
         try {
@@ -40,12 +40,12 @@ public class RedisUtil {
 
     /**
      * 44
-     * ����key ��ȡ����ʱ��
+     * ????key ??????????
      * 45
      *
-     * @param key �� ����Ϊnull
+     * @param key ?? ?????null
      *            46
-     * @return ʱ��(��) ����0����Ϊ������Ч
+     * @return ???(??) ????0???????????��?
      * 47
      */
 
@@ -57,12 +57,12 @@ public class RedisUtil {
 
     /**
      * 53
-     * �ж�key�Ƿ����
+     * ?��??key??????
      * 54
      *
-     * @param key ��
+     * @param key ??
      *            55
-     * @return true ���� false������
+     * @return true ???? false??????
      * 56
      */
 
@@ -84,10 +84,10 @@ public class RedisUtil {
 
     /**
      * 67
-     * ɾ������
+     * ???????
      * 68
      *
-     * @param key ���Դ�һ��ֵ ����
+     * @param key ????????? ????
      *            69
      */
 
@@ -115,12 +115,12 @@ public class RedisUtil {
 
     /**
      * 83
-     * ��ͨ�����ȡ
+     * ?????????
      * 84
      *
-     * @param key ��
+     * @param key ??
      *            85
-     * @return ֵ
+     * @return ?
      * 86
      */
 
@@ -132,14 +132,14 @@ public class RedisUtil {
 
     /**
      * 92
-     * ��ͨ�������
+     * ??????????
      * 93
      *
-     * @param key   ��
+     * @param key   ??
      *              94
-     * @param value ֵ
+     * @param value ?
      *              95
-     * @return true�ɹ� falseʧ��
+     * @return true??? false???
      * 96
      */
 
@@ -163,16 +163,16 @@ public class RedisUtil {
 
     /**
      * 109
-     * ��ͨ������벢����ʱ��
+     * ?????????????????
      * 110
      *
-     * @param key   ��
+     * @param key   ??
      *              111
-     * @param value ֵ
+     * @param value ?
      *              112
-     * @param time  ʱ��(��) timeҪ����0 ���timeС�ڵ���0 ������������
+     * @param time  ???(??) time?????0 ???time��??????0 ????????????
      *              113
-     * @return true�ɹ� false ʧ��
+     * @return true??? false ???
      * 114
      */
 
@@ -204,12 +204,12 @@ public class RedisUtil {
 
     /**
      * 130
-     * ����
+     * ????
      * 131
      *
-     * @param key   ��
+     * @param key   ??
      *              132
-     * @param delta Ҫ���Ӽ�(����0)
+     * @param delta ??????(????0)
      *              133
      * @return 134
      */
@@ -218,7 +218,7 @@ public class RedisUtil {
 
         if (delta < 0) {
 
-            throw new RuntimeException("�������ӱ������0");
+            throw new RuntimeException("??????????????0");
 
         }
 
@@ -228,12 +228,12 @@ public class RedisUtil {
 
     /**
      * 143
-     * �ݼ�
+     * ???
      * 144
      *
-     * @param key   ��
+     * @param key   ??
      *              145
-     * @param delta Ҫ���ټ�(С��0)
+     * @param delta ??????(��???0)
      *              146
      * @return 147
      */
@@ -242,7 +242,7 @@ public class RedisUtil {
 
         if (delta < 0) {
 
-            throw new RuntimeException("�ݼ����ӱ������0");
+            throw new RuntimeException("?????????????0");
 
         }
 
@@ -257,11 +257,11 @@ public class RedisUtil {
      * HashGet
      * 158
      *
-     * @param key  �� ����Ϊnull
+     * @param key  ?? ?????null
      *             159
-     * @param item �� ����Ϊnull
+     * @param item ?? ?????null
      *             160
-     * @return ֵ
+     * @return ?
      * 161
      */
 
@@ -273,12 +273,12 @@ public class RedisUtil {
 
     /**
      * 167
-     * ��ȡhashKey��Ӧ�����м�ֵ
+     * ???hashKey????????��???
      * 168
      *
-     * @param key ��
+     * @param key ??
      *            169
-     * @return ��Ӧ�Ķ����ֵ
+     * @return ??????????
      * 170
      */
 
@@ -293,11 +293,11 @@ public class RedisUtil {
      * HashSet
      * 177
      *
-     * @param key ��
+     * @param key ??
      *            178
-     * @param map ��Ӧ�����ֵ
+     * @param map ?????????
      *            179
-     * @return true �ɹ� false ʧ��
+     * @return true ??? false ???
      * 180
      */
 
@@ -321,16 +321,16 @@ public class RedisUtil {
 
     /**
      * 192
-     * HashSet ������ʱ��
+     * HashSet ?????????
      * 193
      *
-     * @param key  ��
+     * @param key  ??
      *             194
-     * @param map  ��Ӧ�����ֵ
+     * @param map  ?????????
      *             195
-     * @param time ʱ��(��)
+     * @param time ???(??)
      *             196
-     * @return true�ɹ� falseʧ��
+     * @return true??? false???
      * 197
      */
 
@@ -360,16 +360,16 @@ public class RedisUtil {
 
     /**
      * 212
-     * ��һ��hash���з�������,��������ڽ�����
+     * ?????hash???��????????,??????????????
      * 213
      *
-     * @param key   ��
+     * @param key   ??
      *              214
-     * @param item  ��
+     * @param item  ??
      *              215
-     * @param value ֵ
+     * @param value ?
      *              216
-     * @return true �ɹ� falseʧ��
+     * @return true ??? false???
      * 217
      */
 
@@ -393,18 +393,18 @@ public class RedisUtil {
 
     /**
      * 229
-     * ��һ��hash���з�������,��������ڽ�����
+     * ?????hash???��????????,??????????????
      * 230
      *
-     * @param key   ��
+     * @param key   ??
      *              231
-     * @param item  ��
+     * @param item  ??
      *              232
-     * @param value ֵ
+     * @param value ?
      *              233
-     * @param time  ʱ��(��) ע��:����Ѵ��ڵ�hash����ʱ��,���ｫ���滻ԭ�е�ʱ��
+     * @param time  ???(??) ???:?????????hash???????,????????I??��?????
      *              234
-     * @return true �ɹ� falseʧ��
+     * @return true ??? false???
      * 235
      */
 
@@ -434,12 +434,12 @@ public class RedisUtil {
 
     /**
      * 250
-     * ɾ��hash���е�ֵ
+     * ???hash???��???
      * 251
      *
-     * @param key  �� ����Ϊnull
+     * @param key  ?? ?????null
      *             252
-     * @param item �� ����ʹ��� ����Ϊnull
+     * @param item ?? ???????? ?????null
      *             253
      */
 
@@ -451,14 +451,14 @@ public class RedisUtil {
 
     /**
      * 259
-     * �ж�hash�����Ƿ��и����ֵ
+     * ?��??hash????????��??????
      * 260
      *
-     * @param key  �� ����Ϊnull
+     * @param key  ?? ?????null
      *             261
-     * @param item �� ����Ϊnull
+     * @param item ?? ?????null
      *             262
-     * @return true ���� false������
+     * @return true ???? false??????
      * 263
      */
 
@@ -470,14 +470,14 @@ public class RedisUtil {
 
     /**
      * 269
-     * hash���� ���������,�ͻᴴ��һ�� �����������ֵ����
+     * hash???? ?????????,???????? ????????????????
      * 270
      *
-     * @param key  ��
+     * @param key  ??
      *             271
-     * @param item ��
+     * @param item ??
      *             272
-     * @param by   Ҫ���Ӽ�(����0)
+     * @param by   ??????(????0)
      *             273
      * @return 274
      */
@@ -490,14 +490,14 @@ public class RedisUtil {
 
     /**
      * 280
-     * hash�ݼ�
+     * hash???
      * 281
      *
-     * @param key  ��
+     * @param key  ??
      *             282
-     * @param item ��
+     * @param item ??
      *             283
-     * @param by   Ҫ���ټ�(С��0)
+     * @param by   ??????(��???0)
      *             284
      * @return 285
      */
@@ -512,10 +512,10 @@ public class RedisUtil {
 
     /**
      * 292
-     * ����key��ȡSet�е�����ֵ
+     * ????key???Set?��???????
      * 293
      *
-     * @param key ��
+     * @param key ??
      *            294
      * @return 295
      */
@@ -538,14 +538,14 @@ public class RedisUtil {
 
     /**
      * 306
-     * ����value��һ��set�в�ѯ,�Ƿ����
+     * ????value?????set?��???,??????
      * 307
      *
-     * @param key   ��
+     * @param key   ??
      *              308
-     * @param value ֵ
+     * @param value ?
      *              309
-     * @return true ���� false������
+     * @return true ???? false??????
      * 310
      */
 
@@ -567,14 +567,14 @@ public class RedisUtil {
 
     /**
      * 321
-     * �����ݷ���set����
+     * ?????????set????
      * 322
      *
-     * @param key    ��
+     * @param key    ??
      *               323
-     * @param values ֵ �����Ƕ��
+     * @param values ? ????????
      *               324
-     * @return �ɹ�����
+     * @return ???????
      * 325
      */
 
@@ -596,16 +596,16 @@ public class RedisUtil {
 
     /**
      * 336
-     * ��set���ݷ��뻺��
+     * ??set?????????
      * 337
      *
-     * @param key    ��
+     * @param key    ??
      *               338
-     * @param time   ʱ��(��)
+     * @param time   ???(??)
      *               339
-     * @param values ֵ �����Ƕ��
+     * @param values ? ????????
      *               340
-     * @return �ɹ�����
+     * @return ???????
      * 341
      */
 
@@ -633,10 +633,10 @@ public class RedisUtil {
 
     /**
      * 355
-     * ��ȡset����ĳ���
+     * ???set????????
      * 356
      *
-     * @param key ��
+     * @param key ??
      *            357
      * @return 358
      */
@@ -659,14 +659,14 @@ public class RedisUtil {
 
     /**
      * 369
-     * �Ƴ�ֵΪvalue��
+     * ?????value??
      * 370
      *
-     * @param key    ��
+     * @param key    ??
      *               371
-     * @param values ֵ �����Ƕ��
+     * @param values ? ????????
      *               372
-     * @return �Ƴ��ĸ���
+     * @return ????????
      * 373
      */
 
@@ -692,14 +692,14 @@ public class RedisUtil {
 
     /**
      * 386
-     * ��ȡlist���������
+     * ???list?????????
      * 387
      *
-     * @param key   ��
+     * @param key   ??
      *              388
-     * @param start ��ʼ
+     * @param start ???
      *              389
-     * @param end   ���� 0 �� -1��������ֵ
+     * @param end   ???? 0 ?? -1?????????
      *              390
      * @return 391
      */
@@ -722,10 +722,10 @@ public class RedisUtil {
 
     /**
      * 402
-     * ��ȡlist����ĳ���
+     * ???list????????
      * 403
      *
-     * @param key ��
+     * @param key ??
      *            404
      * @return 405
      */
@@ -748,12 +748,12 @@ public class RedisUtil {
 
     /**
      * 416
-     * ͨ������ ��ȡlist�е�ֵ
+     * ??????? ???list?��???
      * 417
      *
-     * @param key   ��
+     * @param key   ??
      *              418
-     * @param index ���� index>=0ʱ�� 0 ��ͷ��1 �ڶ���Ԫ�أ��������ƣ�index<0ʱ��-1����β��-2�����ڶ���Ԫ�أ���������
+     * @param index ???? index>=0??? 0 ?????1 ??????????????????index<0???-1????????-2?????????????????????
      *              419
      * @return 420
      */
@@ -776,12 +776,12 @@ public class RedisUtil {
 
     /**
      * 431
-     * ��list���뻺��
+     * ??list??????
      * 432
      *
-     * @param key   ��
+     * @param key   ??
      *              433
-     * @param value ֵ
+     * @param value ?
      *              434
      * @return 436
      */
@@ -805,11 +805,11 @@ public class RedisUtil {
     }
 
     /**
-     * ��list���뻺��
+     * ??list??????
      *
-     * @param key   ��
-     * @param value ֵ
-     * @param time  ʱ��(��)
+     * @param key   ??
+     * @param value ?
+     * @param time  ???(??)
      * @return
      */
 
@@ -837,12 +837,12 @@ public class RedisUtil {
 
     /**
      * 467
-     * ��list���뻺��
+     * ??list??????
      * 468
      *
-     * @param key   ��
+     * @param key   ??
      *              469
-     * @param value ֵ
+     * @param value ?
      *              470
      * @return 472
      */
@@ -867,16 +867,16 @@ public class RedisUtil {
 
     /**
      * 484
-     * ��list���뻺��
+     * ??list??????
      * 485
      * <p>
      * 486
      *
-     * @param key   ��
+     * @param key   ??
      *              487
-     * @param value ֵ
+     * @param value ?
      *              488
-     * @param time  ʱ��(��)
+     * @param time  ???(??)
      *              489
      * @return 490
      */
@@ -905,14 +905,14 @@ public class RedisUtil {
 
     /**
      * 504
-     * ���������޸�list�е�ĳ������
+     * ???????????list?��?????????
      * 505
      *
-     * @param key   ��
+     * @param key   ??
      *              506
-     * @param index ����
+     * @param index ????
      *              507
-     * @param value ֵ
+     * @param value ?
      *              508
      * @return 509
      */
@@ -937,16 +937,16 @@ public class RedisUtil {
 
     /**
      * 521
-     * �Ƴ�N��ֵΪvalue
+     * ???N????value
      * 522
      *
-     * @param key   ��
+     * @param key   ??
      *              523
-     * @param count �Ƴ����ٸ�
+     * @param count ????????
      *              524
-     * @param value ֵ
+     * @param value ?
      *              525
-     * @return �Ƴ��ĸ���
+     * @return ????????
      * 526
      */
 
@@ -967,12 +967,12 @@ public class RedisUtil {
         }
 
     }
-    //��ȡ���м�
+    //??????��??
     public Set<String> keys(String key){
         Set<String> keys = redisTemplate.keys(key);
         return keys;
     }
-    //ɾ�����м�
+    //??????��??
     public void delAllKeys(String key){
         Set<String> keys = redisTemplate.keys(key);
         redisTemplate.delete(keys);

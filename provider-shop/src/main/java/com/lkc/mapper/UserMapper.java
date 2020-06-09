@@ -22,4 +22,5 @@ public interface UserMapper {
 
     @Select("select userId as userId,userCode as userName,password ,salt,locked,iphone from user_1 where iphone = #{iphone}")
     UserEntity queryUserByPhone(UserEntity user);
+
 }

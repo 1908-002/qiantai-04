@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link href="css/car.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <title></title>
+
+</head>
+<body>
+<div class="car">
+
+
+    <div class="good">
+        <table>
+            <tr>
+                <td width=10%><input type="checkbox" onclick="quan()">全部</td>
+                <td width=20%>商品图片</td>
+                <td width=20%>商品名称</td>
+                <td width=10%>单价</td>
+                <td width=10%>数量</td>
+                <td width=10%>小计</td>
+                <td width=20%>操作</td>
+            </tr>
+        </table>
+    </div>
+
+    <div  th:each="gw,gwStat:${gouWuList}">
+        <div th:if="${gwStat.index eq 0}">
+            <div class="goods">
+                <table>
+                    <tr>
+                        <td width=10%>
+                            <input type="checkbox" name="che"  th:value="${gw.xiaoji}"  onclick="selectSingle()">
+                        </td>
+                        <td width=20%>
+                            <img th:src="${gw.getImg()}" width="10px" height="10px"/>
+                        </td>
+                        <td width=20%>
+                            <span th:text="${gw.sku_name}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.price}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.shuliang}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.xiaoji}"></span>
+                        </td>
+                        <td width=20%>
+                            <a><button class="btn1" th:onclick="'delectGwcById('+${gw.getGouwuid()}+')'">删除</button></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div th:if="${gwStat.index eq 1}">
+            <div class="goods">
+                <table>
+                    <tr>
+                        <td width=10%>
+                            <input type="checkbox" name="che"  th:value="${gw.xiaoji}"  onclick="selectSingle()">
+                        </td>
+                        <td width=20%>
+                            <img th:src="${gw.getImg()}" width="10px" height="10px"/>
+                        </td>
+                        <td width=20%>
+                            <span th:text="${gw.sku_name}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.price}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.shuliang}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.xiaoji}"></span>
+                        </td>
+                        <td width=20%>
+                            <a><button class="btn1"  th:onclick="delectGwcById(${gw.getGouwuid()})">删除</button></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div th:if="${gwStat.index eq 2}">
+            <div class="goods">
+                <table>
+                    <tr>
+                        <td width=10%>
+                            <input type="checkbox" name="che"  th:value="${gw.xiaoji}"  onclick="selectSingle()">
+                        </td>
+                        <td width=20%>
+                            <img th:src="${gw.getImg()}" width="10px" height="10px"/>
+                        </td>
+                        <td width=20%>
+                            <span th:text="${gw.sku_name}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.price}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.shuliang}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.xiaoji}"></span>
+                        </td>
+                        <td width=20%>
+                            <a><button class="btn1"  th:onclick="'delectGwcById('+${gw.getGouwuid()}+')'">删除</button></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div th:if="${gwStat.index eq 3}">
+            <div class="goods">
+                <table>
+                    <tr>
+                        <td width=10%>
+                            <input type="checkbox" name="che"  th:value="${gw.xiaoji}"  onclick="selectSingle()">
+                        </td>
+                        <td width=20%>
+                            <img th:src="${gw.getImg()}" width="10px" height="10px"/>
+                        </td>
+                        <td width=20%>
+                            <span th:text="${gw.sku_name}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.price}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.shuliang}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.xiaoji}"></span>
+                        </td>
+                        <td width=20%>
+                            <a><button class="btn1"  th:onclick="'delectGwcById('+${gw.getGouwuid()}+')'">删除</button></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div th:if="${gwStat.index eq 4}">
+            <div class="goods">
+                <table>
+                    <tr>
+                        <td width=10%>
+                            <input type="checkbox" name="che"  th:value="${gw.xiaoji}"  onclick="selectSingle()">
+                        </td>
+                        <td width=20%>
+                            <img th:src="${gw.getImg()}" width="10px" height="10px"/>
+                        </td>
+                        <td width=20%>
+                            <span th:text="${gw.sku_name}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.price}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.shuliang}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.xiaoji}"></span>
+                        </td>
+                        <td width=20%>
+                            <a><button class="btn1"  th:onclick="'delectGwcById('+${gw.getGouwuid()}+')'">删除</button></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div th:if="${gwStat.index eq 5}">
+            <div class="goods">
+                <table>
+                    <tr>
+                        <td width=10%>
+                            <input type="checkbox" name="che"  th:value="${gw.xiaoji}"  onclick="selectSingle()">
+                        </td>
+                        <td width=20%>
+                            <img th:src="${gw.getImg()}" width="10px" height="10px"/>
+                        </td>
+                        <td width=20%>
+                            <span th:text="${gw.sku_name}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.price}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.shuliang}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.xiaoji}"  id="Subtotal"></span>
+                        </td>
+                        <td width=20%>
+                            <a><button class="btn1"  th:onclick="'delectGwcById('+${gw.getGouwuid()}+')'">删除</button></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div th:if="${gwStat.index eq 6}">
+            <div class="goods">
+                <table>
+                    <tr>
+                        <td width=10%>
+                            <input type="checkbox" name="che"  th:value="${gw.xiaoji}"  onclick="selectSingle()">
+                        </td>
+                        <td width=20%>
+                            <img th:src="${gw.getImg()}" width="10px" height="10px"/>
+                        </td>
+                        <td width=20%>
+                            <span th:text="${gw.sku_name}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.price}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.shuliang}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.xiaoji}"></span>
+                        </td>
+                        <td width=20%>
+                            <a><button class="btn1"  th:onclick="'delectGwcById('+${gw.getGouwuid()}+')'">删除</button></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div th:if="${gwStat.index eq 7}">
+            <div class="goods">
+                <table>
+                    <tr>
+                        <td width=10%>
+                            <input type="checkbox" name="che"  th:value="${gw.xiaoji}"  onclick="selectSingle()">
+                        </td>
+                        <td width=20%>
+                            <img th:src="${gw.getImg()}" width="10px" height="10px"/>
+                        </td>
+                        <td width=20%>
+                            <span th:text="${gw.sku_name}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.price}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.shuliang}"></span>
+                        </td>
+                        <td width=10%>
+                            <span th:text="${gw.xiaoji}"></span>
+                        </td>
+                        <td width=20%>
+                            <a><button class="btn1"  th:onclick="'delectGwcById('+${gw.getGouwuid()}+')'">删除</button></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="goods2">
+        <table>
+            <tr>
+                <td width=560></td>
+                <td width=20%></td>
+                <td>总数：
+                    <span id="avg"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="goods1">
+        <table>
+            <tr>
+                <td width=50%>
+                    <button class="btn2">确认购买</button>
+                </td>
+                <td>
+                    <button class="btn3" onclick="delAllGouWu()">全部清空</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+</div>
+
+
+
+</body>
+<script>
+
+    function quan() {
+        var arr = document.getElementsByName("che");
+        for(var i = 0 ;i<arr.length;i++){
+            if(arr[i].checked){
+                arr[i].checked = false;
+            }else{
+                arr[i].checked = true;
+            }
+        }
+        var coun = 0;
+        for (var i=0;i<arr.length;i++) {
+            if (arr[i].checked) {
+                coun+=(arr[i].value)*1;
+            }
+        }
+        alert(coun)
+
+        $("#avg").text(coun)
+    }
+
+    function delectGwcById(id) {
+        alert(id);
+        $.ajax({
+            url:"delectGwcById",
+            type:"post",
+            data:{id,id},
+            success:function (data) {
+                alert("data");
+                location.href="../GouWu";
+            }
+        })
+    }
+
+    function selectSingle() {
+        var arr = document.getElementsByName("che");
+
+
+
+        var coun = 0;
+        for (var i=0;i<arr.length;i++) {
+            if (arr[i].checked) {
+                coun+=(arr[i].value)*1;
+            }
+        }
+        alert(coun)
+
+        $("#avg").text(coun)
+
+    }
+
+    
+    function delAllGouWu() {
+        location.href="../delAllGouWu";
+    }
+</script>
+</html>
+
